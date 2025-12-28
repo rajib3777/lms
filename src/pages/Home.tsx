@@ -245,8 +245,7 @@ export default function Home(){
             <div className="glass rounded-xl2 p-5">
               <div className="font-display text-xl font-extrabold">Banner-based Learning Experience</div>
               <p className="mt-2 text-sm text-[var(--muted)]">
-                আপনার রিকোয়ারমেন্ট অনুযায়ী ভিডিও প্লেসহোল্ডারের জায়গায় আমরা ব্যানার কনসেপ্ট ব্যবহার করেছি—
-                যাতে ইন্সটিটিউটের প্রোমোশনাল ভিজ্যুয়াল সবসময় সামনে থাকে।
+                ডেমো ক্লাস ।
               </p>
               <div className="mt-4 flex gap-3">
                 <Link to="/about"><AnimatedButton variant="ghost">Institute Info</AnimatedButton></Link>
@@ -266,7 +265,7 @@ export default function Home(){
           <SectionTitle
             kicker="Top Students"
             title="Best Students & Achievements"
-            desc="এই অংশটা ক্লায়েন্টদের জন্য খুব strong proof—আপনার real data বসালেই ready।"
+            desc="আমরাই আগামী ।"
           />
           <div className="grid gap-5 md:grid-cols-3">
             {bestStudents.map((s, idx) => (
@@ -335,7 +334,7 @@ export default function Home(){
           <SectionTitle
             kicker="Course Flow"
             title="Step-by-step Rocket Journey"
-            desc="আপনার চাহিদা অনুযায়ী স্টেপ-বাই-স্টেপ কোর্স ফ্লো—রকেট জার্নির মতো।"
+            desc="আপনার ইচ্ছা আমাদের পথ চলা "
           />
           <RocketTimeline steps={rocketSteps} />
         </Container>
