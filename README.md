@@ -1,4 +1,4 @@
-# Captain Aminul Islam IT Institute (UI Demo)
+# Captain Aminul Haque IT Institute (UI Demo)
 
 Inspired UI layout: Programming Hero-like modern colorful landing + smooth animations.
 This is a **front-end only** project (no backend). You can plug any API later.

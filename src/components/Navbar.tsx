@@ -58,7 +58,7 @@ export default function Navbar(){
             <Link to="/" className="flex items-center gap-2">
               <div className="h-10 w-10 rounded-xl2 btn-grad animate-shimmer grid place-items-center text-white font-extrabold shadow-soft">C</div>
               <div className="leading-tight">
-                <div className="font-display font-extrabold">Captain Aminul Islam</div>
+                <div className="font-display font-extrabold">Captain Aminul Haque</div>
                 <div className="text-xs text-[var(--muted)] -mt-0.5">IT Institute</div>
               </div>
             </Link>

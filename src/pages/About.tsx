@@ -10,7 +10,7 @@ export default function About(){
     <Container className="py-14">
       <SectionTitle
         kicker="About"
-        title="Captain Aminul Islam IT Institute"
+        title="Captain Aminul Haque IT Institute"
         desc="আমাদের লক্ষ্য—বেকারত্ব কমাতে বাস্তব স্কিল শেখানো, এবং শিক্ষার্থীদের কাজ/ব্যবসার পথে গাইড করা।"
       />
 

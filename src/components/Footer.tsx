@@ -8,7 +8,7 @@ export default function Footer(){
       <Container className="py-12">
         <div className="grid gap-10 md:grid-cols-4">
           <div className="md:col-span-2">
-            <div className="font-display text-xl font-extrabold gradient-text">Captain Aminul Islam IT Institute</div>
+            <div className="font-display text-xl font-extrabold gradient-text">Captain Aminul Haque IT Institute</div>
             <p className="mt-3 text-[var(--muted)] max-w-md">
               ডিজিটাল মার্কেটিং, গ্রাফিক্স, ভিডিও এডিটিং, ওয়েব ডেভেলপমেন্ট ও অনলাইন বিজনেস—সব এক জায়গায়।
               লক্ষ্য একটাই: স্কিল + ক্যারিয়ার + উদ্যোক্তা হয়ে ওঠা।
@@ -41,7 +41,7 @@ export default function Footer(){
         </div>
 
         <div className="mt-10 flex flex-col md:flex-row gap-2 md:items-center md:justify-between text-xs text-[var(--muted)]">
-          <div>© {new Date().getFullYear()} Captain Aminul Islam IT Institute. All rights reserved.</div>
+          <div>© {new Date().getFullYear()} Captain Aminul Haque IT Institute. All rights reserved.</div>
           <div>Built By MD.Rajibul Islam Shuvo</div>
         </div>
       </Container>

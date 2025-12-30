@@ -44,7 +44,7 @@ export default function Home(){
               <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: .6 }}>
                 <div className="inline-flex items-center gap-2 glass rounded-full px-4 py-2 text-sm font-semibold">
                   <Sparkles size={16} />
-                  <span>Captain Aminul Islam IT Institute</span>
+                  <span>Captain Aminul Haque IT Institute</span>
                 </div>
 
                 <h1 className="mt-5 font-display text-4xl sm:text-5xl font-extrabold leading-tight tracking-tight">
