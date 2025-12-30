@@ -97,24 +97,24 @@ export const demoClasses = [
 
 export const plans = [
   {
-    name: "Starter",
+    name: "Digital marketing Bootcamp (DM)",
     price: "৳ 0",
     tag: "ফ্রি ডেমো",
     points: ["ডেমো ক্লাস অ্যাক্সেস", "কোর্স আউটলাইন", "কমিউনিটি ইন্ট্রো", "ক্যারিয়ার রোডম্যাপ"],
     accent: "from-[var(--grad-a)] to-[var(--grad-b)]"
   },
   {
-    name: "Pro",
-    price: "৳ 3,999",
+    name: "Entrepreneurship Bootcamp (Ecom)",
+    price: "৳ 0",
     tag: "Most Popular",
     points: ["লাইভ ব্যাচ", "প্রজেক্ট + ফিডব্যাক", "সাপোর্ট চ্যাট", "সার্টিফিকেট", "সাপ্তাহিক রিভিউ কল"],
     accent: "from-[var(--grad-b)] to-[var(--grad-c)]"
   },
   {
-    name: "Career+",
-    price: "৳ 7,999",
+    name: "Didgital Pro Pack (DM + Ecom + GD + VE)",
+    price: "৳ 0",
     tag: "Job/Client Ready",
-    points: ["সব Pro সুবিধা", "CV/Portfolio", "Mock Interview", "Client Hunting Playbook", "ইন্টার্নশিপ গাইডলাইন"],
+    points: ["Entrepreneurship", "সব Pro সুবিধা", "CV/Portfolio", "Mock Interview", "Client Hunting Playbook", "ইন্টার্নশিপ গাইডলাইন"],
     accent: "from-[var(--grad-c)] to-[var(--grad-d)]"
   }
 ];
@@ -123,17 +123,17 @@ export const testimonials = [
   {
     name: "Sadia",
     role: "Freelancer",
-    quote: "২ সপ্তাহের ভিতরেই আমি Facebook Ads-এ প্রথম ক্লায়েন্ট পাই। ক্লাস + গাইডলাইন টপ!"
+    quote: "২ সপ্তাহের ভিতরেই আমি Facebook Ads-এ প্রথম ক্লায়েন্ট পাই। ক্লাস + গাইডলাইন টপ! Captain Aminul Haque It Institute কে ধন্যবাদ।"
   },
   {
     name: "Tanvir",
     role: "E-commerce Seller",
-    quote: "Branding থেকে শুরু করে sales funnel—সব একসাথে বুঝে গেছি। আমার সেল ৩x হয়েছে।"
+    quote: "Captain Aminul Haque It Institute থেকে শুরু করে , Digital marketying and sales funnel—সব একসাথে বুঝে গেছি। আমার সেল ৩x হয়েছে।"
   },
   {
     name: "Mim",
     role: "Job Seeker",
-    quote: "CV, interview practice, portfolio—সব সাপোর্ট পাই। এখন আমি junior marketer হিসেবে কাজ করছি।"
+    quote: "CV, interview practice, portfolio—সব সাপোর্ট পাই। এখন আমি junior marketer হিসেবে কাজ করছি। ধন্যবাদ Captain Aminul Haque It Institute !"
   }
 ];
 

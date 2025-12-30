@@ -28,7 +28,7 @@ export default function Footer(){
           <div>
             <div className="font-bold">Support</div>
             <div className="mt-3 text-sm text-[var(--muted)] space-y-2">
-              <div>☎️ +8801581620802</div>
+              <div>☎️ +8801335590137</div>
               <div>🕒 Daily: 10:00 AM – 10:00 PM</div>
               <div>📍 Dhaka-16 (Shawrapara,Mirpur)</div>
               <div className="flex items-center gap-3 pt-2">

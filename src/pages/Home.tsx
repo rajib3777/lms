@@ -7,6 +7,8 @@ import RocketTimeline from "../components/RocketTimeline";
 import { motion } from "framer-motion";
 import banner from "../assets/banner.jpeg";
 import poster from "../assets/poster.jpeg";
+import Dhaka16MissionSection from "../sections/Dhaka16MissionSection";
+
 import {
   blogPosts,
   companyConnections,
@@ -40,8 +42,20 @@ export default function Home(){
       <section className="relative overflow-hidden">
         <Container className="py-16 sm:py-20">
           <div className="grid items-center gap-10 lg:grid-cols-2">
-            <div>
+            {/* TEXT */}
+            <div className="order-2 lg:order-1">
               <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: .6 }}>
+                {/* ✅ MOBILE: Banner (Navbar এর নিচে, slogan এর আগে) */}
+                <div className="lg:hidden mb-6">
+                  <div className="rounded-xl2 overflow-hidden shadow-glow">
+                    <img
+                      src={banner}
+                      alt="Institute Banner"
+                      className="w-full h-auto object-cover"
+                    />
+                  </div>
+                </div>
+
                 <div className="inline-flex items-center gap-2 glass rounded-full px-4 py-2 text-sm font-semibold">
                   <Sparkles size={16} />
                   <span>Captain Aminul Haque IT Institute</span>
@@ -74,20 +88,37 @@ export default function Home(){
                   ))}
                 </div>
 
-                <div className="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-3">
+                {/* 4 stats */}
+                <div className="mt-8 py-6 grid grid-cols-2 sm:grid-cols-4 gap-3">
                   {quickFacts.map(s => <Stat key={s.label} label={s.label} value={s.value} />)}
+                </div>
+
+                {/* ✅ MOBILE: Training card after 4 stats */}
+                <div className="lg:hidden mt-5 glass rounded-xl2 p-4">
+                  <div className="flex items-center gap-3">
+                    <div className="h-10 w-10 rounded-xl2 btn-grad animate-shimmer grid place-items-center text-white font-extrabold">
+                      ✓
+                    </div>
+                    <div>
+                      <div className="font-bold">Training শেষে</div>
+                      <div className="text-sm text-[var(--muted)]">
+                        কাজের ব্যবস্থা + জব প্লেসমেন্ট গাইডলাইন
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </motion.div>
             </div>
 
-            <div className="relative">
+            {/* ✅ DESKTOP ONLY: Banner + training card (mobile এ hide) */}
+            <div className="relative hidden lg:block order-1 lg:order-2">
               <motion.div
                 initial={{ opacity: 0, scale: 0.98 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: .6, delay: .1 }}
-                className="relative glass rounded-xl2 p-4 shadow-glow"
+                className="relative rounded-xl2 overflow-hidden shadow-glow"
               >
-                <img src={banner} alt="Institute Banner" className="w-full rounded-xl2 object-cover" />
+                <img src={banner} alt="Institute Banner" className="w-full object-cover" />
                 <div className="absolute -bottom-8 -left-6 hidden sm:block">
                   <Rocket className="h-28 w-28 drop-shadow-xl" />
                 </div>
@@ -121,6 +152,9 @@ export default function Home(){
           </div>
         </Container>
       </section>
+
+      {/* 🔥 DHAKA-16 MISSION SECTION */}
+      <Dhaka16MissionSection />
 
       {/* COURSES */}
       <section className="mt-6">
@@ -245,7 +279,8 @@ export default function Home(){
             <div className="glass rounded-xl2 p-5">
               <div className="font-display text-xl font-extrabold">Banner-based Learning Experience</div>
               <p className="mt-2 text-sm text-[var(--muted)]">
-                ডেমো ক্লাস ।
+                আপনার রিকোয়ারমেন্ট অনুযায়ী ভিডিও প্লেসহোল্ডারের জায়গায় আমরা ব্যানার কনসেপ্ট ব্যবহার করেছি—
+                যাতে ইন্সটিটিউটের প্রোমোশনাল ভিজ্যুয়াল সবসময় সামনে থাকে।
               </p>
               <div className="mt-4 flex gap-3">
                 <Link to="/about"><AnimatedButton variant="ghost">Institute Info</AnimatedButton></Link>
@@ -265,7 +300,7 @@ export default function Home(){
           <SectionTitle
             kicker="Top Students"
             title="Best Students & Achievements"
-            desc="আমরাই আগামী ।"
+            desc="এই অংশটা ক্লায়েন্টদের জন্য খুব strong proof—আপনার real data বসালেই ready।"
           />
           <div className="grid gap-5 md:grid-cols-3">
             {bestStudents.map((s, idx) => (
@@ -334,7 +369,7 @@ export default function Home(){
           <SectionTitle
             kicker="Course Flow"
             title="Step-by-step Rocket Journey"
-            desc="আপনার ইচ্ছা আমাদের পথ চলা "
+            desc="আপনার চাহিদা অনুযায়ী স্টেপ-বাই-স্টেপ কোর্স ফ্লো—রকেট জার্নির মতো।"
           />
           <RocketTimeline steps={rocketSteps} />
         </Container>
@@ -389,7 +424,7 @@ export default function Home(){
               </div>
               <div>
                 <div className="font-display text-xl font-extrabold">আজই রেজিস্ট্রেশন করো — আসন সংখ্যা সীমিত!</div>
-                <div className="text-sm text-[var(--muted)]">যোগাযোগ: +8801581620802</div>
+                <div className="text-sm text-[var(--muted)]">যোগাযোগ: 01335590137</div>
               </div>
             </div>
             <div className="flex gap-3">

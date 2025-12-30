@@ -12,6 +12,10 @@ export default function Signup(){
   const [plan, setPlan] = useState("Pro");
   const [ok, setOk] = useState(false);
 
+  // ✅ Added missing states
+  const [isDhaka16, setIsDhaka16] = useState("");
+  const [dhaka16Area, setDhaka16Area] = useState("");
+
   function onSubmit(e: React.FormEvent){
     e.preventDefault();
     setOk(true);
@@ -46,6 +50,7 @@ export default function Signup(){
         <label className="block">
           <div className="text-sm font-semibold">Email</div>
           <input
+            type="email"
             className="mt-2 w-full rounded-xl2 border border-[var(--border)] bg-[var(--bg2)] px-4 py-3 text-sm focus-ring"
             placeholder="you@email.com"
             value={email}
@@ -61,11 +66,57 @@ export default function Signup(){
             value={plan}
             onChange={(e)=>setPlan(e.target.value)}
           >
-            <option>Starter</option>
-            <option>Pro</option>
-            <option>Career+</option>
+            <option>Digital marketing</option>
+            <option>Entrepreneurship</option>
+            <option>Didgital Pro Pack</option>
           </select>
         </label>
+
+        {/* DHAKA-16 VOTER */}
+        <label className="block mt-5">
+          <div className="mb-2 text-sm font-semibold flex items-center gap-2">
+            <span className="h-2 w-2 rounded-full bg-[var(--grad-c)]"></span>
+            Are you a Dhaka-16 voter?
+          </div>
+
+          <select
+            className="
+              w-full
+              rounded-xl2
+              border border-[var(--border)]
+              bg-[color-mix(in_srgb,var(--bg2)_85%,transparent)]
+              px-4 py-3
+              text-sm font-medium
+              focus-ring
+              transition
+              hover:shadow-soft
+            "
+            value={isDhaka16}
+            onChange={(e) => setIsDhaka16(e.target.value)}
+            required
+          >
+            <option value="">Select an option</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+        </label>
+
+        {/* DHAKA-16 AREA (ONLY IF YES) */}
+        {isDhaka16 === "yes" && (
+          <label className="block">
+            <div className="mb-2 text-sm font-semibold flex items-center gap-2">
+              <span className="h-2 w-2 rounded-full bg-[var(--grad-c)]"></span>
+              Dhaka-16 Area (English)
+            </div>
+            <input
+              className="w-full rounded-xl2 border border-[var(--border)] bg-[color-mix(in_srgb,var(--bg2)_85%,transparent)] px-4 py-3 text-sm focus-ring transition hover:shadow-soft"
+              placeholder="e.g. Pallabi, Rupnagar, Ward No 2"
+              value={dhaka16Area}
+              onChange={(e)=>setDhaka16Area(e.target.value)}
+              required
+            />
+          </label>
+        )}
 
         <AnimatedButton className="w-full">Confirm Enrollment</AnimatedButton>
 

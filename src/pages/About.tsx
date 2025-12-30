@@ -53,7 +53,7 @@ export default function About(){
           </div>
 
           <div className="mt-6 flex gap-3 flex-col sm:flex-row">
-            <AnimatedButton className="flex-1">Contact: +8801581620802</AnimatedButton>
+            <AnimatedButton className="flex-1">Contact: +8801335590137</AnimatedButton>
             <AnimatedButton variant="ghost" className="flex-1">Download Brochure</AnimatedButton>
           </div>
         </motion.div>

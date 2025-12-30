@@ -5,6 +5,7 @@ import { useTheme } from "../theme/ThemeProvider";
 import { Menu, Moon, Sun } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import logo from "../assets/nav_log.png";
 
 const nav = [
   { to: "/", label: "Home" },
@@ -56,7 +57,14 @@ export default function Navbar(){
         <Container className="py-3">
           <div className="flex items-center justify-between gap-3">
             <Link to="/" className="flex items-center gap-2">
-              <div className="h-10 w-10 rounded-xl2 btn-grad animate-shimmer grid place-items-center text-white font-extrabold shadow-soft">C</div>
+              
+              <div className="h-16 w-16 rounded-xl2 overflow-hidden shadow-soft">
+                <img
+                  src={logo}
+                  alt="Captain Aminul Haque IT Institute"
+                  className="h-full w-full object-contain"
+                />
+              </div>
               <div className="leading-tight">
                 <div className="font-display font-extrabold">Captain Aminul Haque</div>
                 <div className="text-xs text-[var(--muted)] -mt-0.5">IT Institute</div>
