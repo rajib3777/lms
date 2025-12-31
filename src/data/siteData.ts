@@ -10,7 +10,7 @@ export type Course = {
 };
 
 export const slogan = {
-  headline: "স্কিল নাও, আয় করো—উদ্যোক্তা হও!",
+  headline: "স্কিল দিয়ে গড়া ভবিষ্যৎ, কর্মসংস্থানে অঙ্গীকার !",
   sub: "Digital Marketing & Entrepreneurship-এর জন্য একদম ইন্ডাস্ট্রি-রেডি বুটক্যাম্প। লাইভ ক্লাস, ডেমো ক্লাস, সাপোর্ট, গাইডলাইন—সব একসাথে।"
 };
 

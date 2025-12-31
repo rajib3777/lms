@@ -52,7 +52,7 @@ export default function Dhaka16MissionSection() {
           </div>
 
           <h2 className="mt-4 font-display text-3xl sm:text-4xl font-extrabold leading-tight">
-            <span className="gradient-text">ঢাকা-১৬ মানুষের জন্য তাঁর অঙ্গীকার</span>
+            <span className="gradient-text">ঢাকা-১৬ মানুষের জন্য আমিনুল হকের অঙ্গীকার</span>
           </h2>
 
           <p className="mt-3 text-[var(--muted)]">

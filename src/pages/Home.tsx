@@ -58,7 +58,7 @@ export default function Home(){
 
                 <div className="inline-flex items-center gap-2 glass rounded-full px-4 py-2 text-sm font-semibold">
                   <Sparkles size={16} />
-                  <span>Captain Aminul Haque IT Institute</span>
+                  <span>ক্যাপ্টেন আমিনুল হক আইটি ইনস্টিটিউট</span>
                 </div>
 
                 <h1 className="mt-5 font-display text-4xl sm:text-5xl font-extrabold leading-tight tracking-tight">
@@ -279,8 +279,7 @@ export default function Home(){
             <div className="glass rounded-xl2 p-5">
               <div className="font-display text-xl font-extrabold">Banner-based Learning Experience</div>
               <p className="mt-2 text-sm text-[var(--muted)]">
-                আপনার রিকোয়ারমেন্ট অনুযায়ী ভিডিও প্লেসহোল্ডারের জায়গায় আমরা ব্যানার কনসেপ্ট ব্যবহার করেছি—
-                যাতে ইন্সটিটিউটের প্রোমোশনাল ভিজ্যুয়াল সবসময় সামনে থাকে।
+                আমাদের ইনস্টিটিউটের বিশেষত্ব হলো banner-based learning approach। প্রতিটি মডিউল এমনভাবে ডিজাইন করা হয়েছে যাতে শিক্ষার্থীরা বাস্তব জীবনের প্রজেক্টে কাজ করার মাধ্যমে দক্ষতা অর্জন করতে পারে। এই পদ্ধতিতে, শিক্ষার্থীরা কেবল তাত্ত্বিক জ্ঞানই নয়, বরং বাস্তব অভিজ্ঞতাও লাভ করে, যা তাদের ক্যারিয়ার গঠনে সহায়ক হয়।
               </p>
               <div className="mt-4 flex gap-3">
                 <Link to="/about"><AnimatedButton variant="ghost">Institute Info</AnimatedButton></Link>
@@ -300,7 +299,7 @@ export default function Home(){
           <SectionTitle
             kicker="Top Students"
             title="Best Students & Achievements"
-            desc="এই অংশটা ক্লায়েন্টদের জন্য খুব strong proof—আপনার real data বসালেই ready।"
+            desc="আমরা আমাদের শিক্ষার্থীদের সঙ্গে আজীবন যুক্ত থাকার প্রতিশ্রুতিতে বদ্ধপরিকর —তাদের সাফল্যই আমাদের গর্ব।"
           />
           <div className="grid gap-5 md:grid-cols-3">
             {bestStudents.map((s, idx) => (
