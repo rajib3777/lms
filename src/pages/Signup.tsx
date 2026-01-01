@@ -12,14 +12,51 @@ export default function Signup(){
   const [plan, setPlan] = useState("Pro");
   const [ok, setOk] = useState(false);
 
-  // ✅ Added missing states
   const [isDhaka16, setIsDhaka16] = useState("");
   const [dhaka16Area, setDhaka16Area] = useState("");
 
-  function onSubmit(e: React.FormEvent){
+  async function onSubmit(e: React.FormEvent){
     e.preventDefault();
-    setOk(true);
-    setTimeout(() => setOk(false), 1600);
+
+    // optional client-side validation (backend তেও আছে)
+    if (isDhaka16 !== "yes") {
+      alert("Only Dhaka-16 voters can register.");
+      return;
+    }
+    if (!dhaka16Area.trim()) {
+      alert("Please enter your Dhaka-16 area (English).");
+      return;
+    }
+
+    try {
+      const API = import.meta.env.VITE_API_BASE || "https://captain-aminul-haque-it-institute.onrender.com";
+
+      const res = await fetch(`${API}/accounts/api/register/`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name,
+          phone,
+          email,
+          plan,
+          isDhaka16,
+          dhaka16Area,
+        }),
+      });
+
+      const data = await res.json().catch(() => ({}));
+
+      if (!res.ok) {
+        alert(data?.error || "Registration failed");
+        return;
+      }
+
+      setOk(true);
+      setTimeout(() => setOk(false), 1600);
+
+    } catch (err) {
+      alert("Network error. Please try again.");
+    }
   }
 
   return (
