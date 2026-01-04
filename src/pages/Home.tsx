@@ -45,7 +45,7 @@ export default function Home(){
             {/* TEXT */}
             <div className="order-2 lg:order-1">
               <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: .6 }}>
-                {/* ✅ MOBILE: Banner (Navbar এর নিচে, slogan এর আগে) */}
+                
                 <div className="lg:hidden mb-6">
                   <div className="rounded-xl2 overflow-hidden shadow-glow">
                     <img
@@ -61,8 +61,10 @@ export default function Home(){
                   <span>ক্যাপ্টেন আমিনুল হক আইটি ইনস্টিটিউট</span>
                 </div>
 
-                <h1 className="mt-5 font-display text-4xl sm:text-5xl font-extrabold leading-tight tracking-tight">
-                  <span className="gradient-text">{slogan.headline}</span>
+                <h1 className="mt-5 font-display text-4xl sm:text-5xl font-extrabold leading-[1.28] sm:leading-[1.22] tracking-tight">
+                  <span className="gradient-text inline-block pb-[2px]">
+                    {slogan.headline}
+                  </span>
                 </h1>
                 <p className="mt-4 text-[var(--muted)] text-base sm:text-lg max-w-xl">{slogan.sub}</p>
 
@@ -93,7 +95,7 @@ export default function Home(){
                   {quickFacts.map(s => <Stat key={s.label} label={s.label} value={s.value} />)}
                 </div>
 
-                {/* ✅ MOBILE: Training card after 4 stats */}
+                {/* MOBILE: Training card after 4 stats */}
                 <div className="lg:hidden mt-5 glass rounded-xl2 p-4">
                   <div className="flex items-center gap-3">
                     <div className="h-10 w-10 rounded-xl2 btn-grad animate-shimmer grid place-items-center text-white font-extrabold">
@@ -110,7 +112,7 @@ export default function Home(){
               </motion.div>
             </div>
 
-            {/* ✅ DESKTOP ONLY: Banner + training card (mobile এ hide) */}
+            {/* DESKTOP ONLY: Banner + training card  */}
             <div className="relative hidden lg:block order-1 lg:order-2">
               <motion.div
                 initial={{ opacity: 0, scale: 0.98 }}

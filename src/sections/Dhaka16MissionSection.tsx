@@ -51,8 +51,10 @@ export default function Dhaka16MissionSection() {
             ঢাকা-১৬ (পল্লবী–রূপনগর)
           </div>
 
-          <h2 className="mt-4 font-display text-3xl sm:text-4xl font-extrabold leading-tight">
-            <span className="gradient-text">ঢাকা-১৬ মানুষের জন্য আমিনুল হকের অঙ্গীকার</span>
+          <h2 className="mt-4 font-display text-3xl sm:text-4xl font-extrabold leading-[1.3] sm:leading-[1.22]">
+            <span className="gradient-text inline-block pb-[2px]">
+              ঢাকা-১৬ মানুষের জন্য আমিনুল হকের অঙ্গীকার
+            </span>
           </h2>
 
           <p className="mt-3 text-[var(--muted)]">
