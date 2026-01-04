@@ -191,6 +191,8 @@ export default function Home(){
                     "Facebook & Google Ads",
                     "Content Strategy",
                     "Analytics & Reporting",
+                    "Job Placement",
+                    "Duration 6 month",
                   ].map((step, i) => (
                     <div key={i} className="relative flex gap-3">
                       <span className="mt-1 h-2.5 w-2.5 rounded-full bg-purple-400" />
@@ -253,6 +255,8 @@ export default function Home(){
                     "Business Model Design",
                     "Brand & Sales Strategy",
                     "Scaling & Growth",
+                    "Job Placement",
+                    "Duration 6 month",
                   ].map((step, i) => (
                     <div key={i} className="relative flex gap-3">
                       <span className="mt-1 h-2.5 w-2.5 rounded-full bg-purple-400" />
