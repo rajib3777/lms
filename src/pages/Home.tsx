@@ -173,40 +173,102 @@ export default function Home(){
       {/* COORDINATOR SHOWCASE SECTION */}
       <section className="relative overflow-x-hidden py-4 sm:py-6">
         <Container>
-          <div className="flex justify-center">
-            <div
-              className="
-                rounded-2xl overflow-hidden shadow-glow
-                bg-black/20 ring-2 ring-purple-400/40
-                w-[400px] max-w-[560px]
-              "
-            >
-              {/* IMAGE: no huge top/bottom gaps */}
-              <div className="w-full h-[clamp(260px,40vw,380px)]">
-                <img
-                  src={coordinatorImg}
-                  alt="মো: জাহিদ পারভেজ চৌধুরী"
-                  className="w-full h-full object-cover object-top"
-                />
-              </div>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-start">
 
-              {/* INFO: inside same frame, tight spacing */}
-              <div className="p-3 sm:p-4 text-center">
-                <div className="text-lg sm:text-xl font-extrabold leading-snug">
-                  মো: জাহিদ পারভেজ চৌধুরী
-                </div>
-                <div className="mt-1 text-sm text-[var(--muted)]">
-                  কোর্স কো-অর্ডিনেটর
+            {/* LEFT ROADMAP – DIGITAL MARKETING */}
+            <div className="mt-16 hidden lg:block">
+              <div className="glass rounded-xl2 p-4">
+                <div className="font-extrabold mb-4 text-center">
+                  Digital Marketing Roadmap
                 </div>
 
-                <div className="mt-3 text-[clamp(14px,1.35vw,17px)] text-[var(--muted)] leading-relaxed">
-                  “স্বপ্ন যদি সত্যি করতে চাও, তাহলে ভয়ের সীমানা পার হও”
+                <div className="relative pl-4 space-y-4">
+                  <div className="absolute left-1 top-0 bottom-0 w-px bg-white/20" />
+
+                  {[
+                    "Marketing Fundamentals",
+                    "Social Media Marketing",
+                    "Facebook & Google Ads",
+                    "Content Strategy",
+                    "Analytics & Reporting",
+                  ].map((step, i) => (
+                    <div key={i} className="relative flex gap-3">
+                      <span className="mt-1 h-2.5 w-2.5 rounded-full bg-purple-400" />
+                      <span className="text-sm text-[var(--muted)]">
+                        {step}
+                      </span>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
+
+            
+
+            {/* CENTER – COORDINATOR CARD (UNCHANGED) */}
+            <div className="flex justify-center">
+              <div
+                className="
+                  rounded-2xl overflow-hidden shadow-glow
+                  bg-black/20 ring-2 ring-purple-400/40
+                  w-[400px] max-w-[560px]
+                "
+              >
+                <div className="w-full h-[clamp(260px,40vw,380px)]">
+                  <img
+                    src={coordinatorImg}
+                    alt="মো: জাহিদ পারভেজ চৌধুরী"
+                    className="w-full h-full object-cover object-top"
+                  />
+                </div>
+
+                <div className="p-3 sm:p-4 text-center">
+                  <div className="text-lg sm:text-xl font-extrabold leading-snug">
+                    মো: জাহিদ পারভেজ চৌধুরী
+                  </div>
+                  <div className="mt-1 text-sm text-[var(--muted)]">
+                    কোর্স কো-অর্ডিনেটর
+                  </div>
+
+                  <div className="mt-3 text-[clamp(14px,1.35vw,17px)] text-[var(--muted)] leading-relaxed">
+                    “স্বপ্ন যদি সত্যি করতে চাও, তাহলে ভয়ের সীমানা পার হও”
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* RIGHT ROADMAP – ENTREPRENEURSHIP */}
+            <div className="mt-16 hidden lg:block">
+              <div className="glass rounded-xl2 p-4">
+                <div className="font-extrabold mb-4 text-center">
+                  Entrepreneurship Roadmap
+                </div>
+
+                <div className="relative pl-4 space-y-4">
+                  <div className="absolute left-1 top-0 bottom-0 w-px bg-white/20" />
+
+                  {[
+                    "Idea Validation",
+                    "Market Research",
+                    "Business Model Design",
+                    "Brand & Sales Strategy",
+                    "Scaling & Growth",
+                  ].map((step, i) => (
+                    <div key={i} className="relative flex gap-3">
+                      <span className="mt-1 h-2.5 w-2.5 rounded-full bg-purple-400" />
+                      <span className="text-sm text-[var(--muted)]">
+                        {step}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
           </div>
         </Container>
       </section>
+
 
 
 
