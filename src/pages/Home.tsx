@@ -59,15 +59,8 @@ export default function Home(){
                 </span>
               </div>
 
-              {/* ✅ Responsive Headline (no cut + no overlap) */}
-              <h1 className="mt-5 sm:mt-6 pt-3 pb-2 font-display font-extrabold tracking-tight mx-auto overflow-visible [text-wrap:balance] leading-[1.35] sm:leading-[1.3]">
-                <span className="gradient-text inline-block text-[clamp(32px,5.2vw,72px)]">
-                  {slogan.headline}
-                </span>
-              </h1>
-
               {/* ✅ Poster/Banner (responsive) */}
-              <div className="mt-6 sm:mt-8 rounded-xl2 overflow-hidden shadow-glow">
+              <div className="mt-0 sm:mt-0 rounded-xl2 overflow-hidden shadow-glow">
                 <img
                   src={banner}
                   alt="Institute Banner"
@@ -75,8 +68,16 @@ export default function Home(){
                 />
               </div>
 
+              
+              <h1 className="mt-2 sm:mt-2 pt-3 pb-2 font-display font-extrabold tracking-tight mx-auto overflow-visible [text-wrap:balance] leading-[1.35] sm:leading-[1.3]">
+                <span className="gradient-text inline-block text-[clamp(32px,5.2vw,72px)]">
+                  {slogan.headline}
+                </span>
+              </h1>
+
+
               {/* ✅ Subheading responsive */}
-              <p className="mt-5 sm:mt-6 text-[var(--muted)] mx-auto max-w-3xl text-[clamp(14px,1.6vw,20px)] leading-relaxed">
+              <p className="mt-3 sm:mt-4 text-[var(--muted)] mx-auto max-w-3xl text-[clamp(14px,1.6vw,20px)] leading-relaxed">
                 {slogan.sub}
               </p>
 
@@ -109,42 +110,6 @@ export default function Home(){
               ))}
             </div>
 
-            {/* ✅ Coordinator profile responsive */}
-            <div className="mt-9 sm:mt-10">
-              <div className="mx-auto max-w-3xl glass rounded-xl2 p-5 sm:p-6 text-center">
-                <div
-                  className="
-                    mx-auto
-                    rounded-xl2
-                    overflow-hidden
-                    shadow-glow
-                    bg-white/10
-                    ring-1 ring-white/15
-                    h-[clamp(140px,18vw,220px)]
-                    w-[clamp(140px,18vw,220px)]
-                    flex items-center justify-center
-                  "
-                >
-                  <img
-                    src={coordinatorImg}
-                    alt="Course Coordinator"
-                    className="w-full h-full object-contain scale-[1.1]"
-                  />
-                </div>
-
-
-                <div className="mt-4 font-extrabold text-[clamp(16px,1.6vw,22px)]">
-                  মো: জাহিদ পারভেজ চৌধুরী
-                </div>
-                <div className="text-[clamp(12px,1.1vw,14px)] text-[var(--muted)]">
-                  Course Coordinator
-                </div>
-
-                <div className="mt-4 text-[clamp(14px,1.4vw,18px)] text-[var(--muted)] leading-relaxed">
-                  “স্বপ্ন যদি সত্যি করতে চাও, তাহলে ভয়ের সীমানা পার হও”
-                </div>
-              </div>
-            </div>
 
             {/* ✅ 4 stats responsive */}
             <div className="mt-7 sm:mt-8 py-5 sm:py-6 grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-4xl mx-auto">
@@ -203,6 +168,50 @@ export default function Home(){
 
       {/* 🔥 DHAKA-16 MISSION SECTION */}
       <Dhaka16MissionSection />
+
+
+      {/* COORDINATOR SHOWCASE SECTION */}
+      <section className="relative overflow-x-hidden py-4 sm:py-6">
+        <Container>
+          <div className="flex justify-center">
+            <div
+              className="
+                rounded-2xl overflow-hidden shadow-glow
+                bg-black/20 ring-2 ring-purple-400/40
+                w-[400px] max-w-[560px]
+              "
+            >
+              {/* IMAGE: no huge top/bottom gaps */}
+              <div className="w-full h-[clamp(260px,40vw,380px)]">
+                <img
+                  src={coordinatorImg}
+                  alt="মো: জাহিদ পারভেজ চৌধুরী"
+                  className="w-full h-full object-cover object-top"
+                />
+              </div>
+
+              {/* INFO: inside same frame, tight spacing */}
+              <div className="p-3 sm:p-4 text-center">
+                <div className="text-lg sm:text-xl font-extrabold leading-snug">
+                  মো: জাহিদ পারভেজ চৌধুরী
+                </div>
+                <div className="mt-1 text-sm text-[var(--muted)]">
+                  কোর্স কো-অর্ডিনেটর
+                </div>
+
+                <div className="mt-3 text-[clamp(14px,1.35vw,17px)] text-[var(--muted)] leading-relaxed">
+                  “স্বপ্ন যদি সত্যি করতে চাও, তাহলে ভয়ের সীমানা পার হও”
+                </div>
+              </div>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+
+
+
+
 
       {/* COURSES */}
       <section className="mt-6">
