@@ -179,7 +179,7 @@ export default function Home(){
             <div className="mt-16 hidden lg:block">
               <div className="glass rounded-xl2 p-4">
                 <div className="font-extrabold mb-4 text-center">
-                  Digital Marketing Roadmap
+                  Course Module
                 </div>
 
                 <div className="relative pl-4 space-y-4">
@@ -188,10 +188,11 @@ export default function Home(){
                   {[
                     "Marketing Fundamentals",
                     "Social Media Marketing",
-                    "Facebook & Google Ads",
-                    "Content Strategy",
+                    "200 Course Credit",
+                    "Certification in 160 Credit",
                     "Analytics & Reporting",
-                    "Job Placement",
+                    "Onlien Based Class",
+                    "2 meet up in one month",
                     "Duration 6 month",
                   ].map((step, i) => (
                     <div key={i} className="relative flex gap-3">
@@ -252,10 +253,13 @@ export default function Home(){
                   {[
                     "Idea Validation",
                     "Market Research",
+                    "Office Management",
+                    "Client Hunting",
                     "Business Model Design",
                     "Brand & Sales Strategy",
                     "Scaling & Growth",
-                    "Job Placement",
+                    "product sourcing",
+                    "investor presentation",
                     "Duration 6 month",
                   ].map((step, i) => (
                     <div key={i} className="relative flex gap-3">
