@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 import banner from "../assets/banner.jpeg";
 import poster from "../assets/poster.jpeg";
 import Dhaka16MissionSection from "../sections/Dhaka16MissionSection";
+import coordinatorImg from "../assets/coordinatorImg.png";
 
 import {
   blogPosts,
@@ -39,112 +40,154 @@ export default function Home(){
   return (
     <>
       {/* HERO */}
-      <section className="relative overflow-hidden">
-        <Container className="py-16 sm:py-20">
-          <div className="grid items-center gap-10 lg:grid-cols-2">
-            {/* TEXT */}
-            <div className="order-2 lg:order-1">
-              <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: .6 }}>
-                
-                <div className="lg:hidden mb-6">
-                  <div className="rounded-xl2 overflow-hidden shadow-glow">
-                    <img
-                      src={banner}
-                      alt="Institute Banner"
-                      className="w-full h-auto object-cover"
-                    />
-                  </div>
-                </div>
+    
+      {/* HERO */}
+      <section className="relative overflow-x-hidden">
+        <Container className="py-12 sm:py-16 lg:py-20">
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="mx-auto w-full max-w-5xl"
+          >
+            {/* ✅ TEXT CENTER */}
+            <div className="text-center px-1 sm:px-0">
+              <div className="inline-flex items-center gap-2 glass rounded-full px-3 sm:px-4 py-2 text-[12px] sm:text-sm font-semibold mx-auto">
+                <Sparkles size={16} className="shrink-0" />
+                <span className="whitespace-nowrap sm:whitespace-normal">
+                  ক্যাপ্টেন আমিনুল হক আইটি ইনস্টিটিউট
+                </span>
+              </div>
 
-                <div className="inline-flex items-center gap-2 glass rounded-full px-4 py-2 text-sm font-semibold">
-                  <Sparkles size={16} />
-                  <span>ক্যাপ্টেন আমিনুল হক আইটি ইনস্টিটিউট</span>
-                </div>
+              {/* ✅ Responsive Headline (no cut + no overlap) */}
+              <h1 className="mt-5 sm:mt-6 pt-3 pb-2 font-display font-extrabold tracking-tight mx-auto overflow-visible [text-wrap:balance] leading-[1.35] sm:leading-[1.3]">
+                <span className="gradient-text inline-block text-[clamp(32px,5.2vw,72px)]">
+                  {slogan.headline}
+                </span>
+              </h1>
 
-                <h1 className="mt-5 font-display text-4xl sm:text-5xl font-extrabold leading-[1.28] sm:leading-[1.22] tracking-tight">
-                  <span className="gradient-text inline-block pb-[2px]">
-                    {slogan.headline}
-                  </span>
-                </h1>
-                <p className="mt-4 text-[var(--muted)] text-base sm:text-lg max-w-xl">{slogan.sub}</p>
+              {/* ✅ Poster/Banner (responsive) */}
+              <div className="mt-6 sm:mt-8 rounded-xl2 overflow-hidden shadow-glow">
+                <img
+                  src={banner}
+                  alt="Institute Banner"
+                  className="w-full object-contain h-[clamp(200px,32vw,420px)]"
+                />
+              </div>
 
-                <div className="mt-6 flex flex-col sm:flex-row gap-3">
-                  <a href="#enroll">
-                    <AnimatedButton className="w-full sm:w-auto">
-                      Explore Now <ArrowRight size={18}/>
-                    </AnimatedButton>
-                  </a>
-                  <a href="#demo">
-                    <AnimatedButton variant="ghost" className="w-full sm:w-auto">
-                      Demo Class দেখুন <PlayCircle size={18}/>
-                    </AnimatedButton>
-                  </a>
-                </div>
+              {/* ✅ Subheading responsive */}
+              <p className="mt-5 sm:mt-6 text-[var(--muted)] mx-auto max-w-3xl text-[clamp(14px,1.6vw,20px)] leading-relaxed">
+                {slogan.sub}
+              </p>
 
-                <div className="mt-8 grid gap-3 sm:grid-cols-2">
-                  {heroBullets.map((t) => (
-                    <div key={t} className="flex items-start gap-2 text-sm text-[var(--muted)]">
-                      <CheckCircle2 className="mt-0.5" size={18}/>
-                      <span>{t}</span>
-                    </div>
-                  ))}
-                </div>
-
-                {/* 4 stats */}
-                <div className="mt-8 py-6 grid grid-cols-2 sm:grid-cols-4 gap-3">
-                  {quickFacts.map(s => <Stat key={s.label} label={s.label} value={s.value} />)}
-                </div>
-
-                {/* MOBILE: Training card after 4 stats */}
-                <div className="lg:hidden mt-5 glass rounded-xl2 p-4">
-                  <div className="flex items-center gap-3">
-                    <div className="h-10 w-10 rounded-xl2 btn-grad animate-shimmer grid place-items-center text-white font-extrabold">
-                      ✓
-                    </div>
-                    <div>
-                      <div className="font-bold">Training শেষে</div>
-                      <div className="text-sm text-[var(--muted)]">
-                        কাজের ব্যবস্থা + জব প্লেসমেন্ট গাইডলাইন
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
+              {/* CTA responsive */}
+              <div className="mt-6 sm:mt-7 flex flex-col sm:flex-row justify-center gap-3">
+                <a href="#enroll" className="w-full sm:w-auto">
+                  <AnimatedButton className="w-full sm:w-auto">
+                    Explore Now <ArrowRight size={18} />
+                  </AnimatedButton>
+                </a>
+                <a href="#demo" className="w-full sm:w-auto">
+                  <AnimatedButton variant="ghost" className="w-full sm:w-auto">
+                    Demo Class দেখুন <PlayCircle size={18} />
+                  </AnimatedButton>
+                </a>
+              </div>
             </div>
 
-            {/* DESKTOP ONLY: Banner + training card  */}
-            <div className="relative hidden lg:block order-1 lg:order-2">
-              <motion.div
-                initial={{ opacity: 0, scale: 0.98 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: .6, delay: .1 }}
-                className="relative rounded-xl2 overflow-hidden shadow-glow"
-              >
-                <img src={banner} alt="Institute Banner" className="w-full object-cover" />
-                <div className="absolute -bottom-8 -left-6 hidden sm:block">
-                  <Rocket className="h-28 w-28 drop-shadow-xl" />
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 12 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: .6, delay: .2 }}
-                className="mt-5 glass rounded-xl2 p-4"
-              >
-                <div className="flex items-center gap-3">
-                  <div className="h-10 w-10 rounded-xl2 btn-grad animate-shimmer grid place-items-center text-white font-extrabold">✓</div>
-                  <div>
-                    <div className="font-bold">Training শেষে</div>
-                    <div className="text-sm text-[var(--muted)]">কাজের ব্যবস্থা + জব প্লেসমেন্ট গাইডলাইন</div>
+            {/* ✅ 4 sections responsive (no overflow) */}
+            <div className="mt-8 sm:mt-10 grid gap-3 sm:gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+              {heroBullets.slice(0, 4).map((t) => (
+                <div key={t} className="glass rounded-xl2 p-4 sm:p-4 lg:p-5 text-left">
+                  <div className="flex items-start gap-2 text-[clamp(13px,1.1vw,15px)] text-[var(--muted)]">
+                    <CheckCircle2 className="mt-0.5 shrink-0" size={18} />
+                    <span className="text-[var(--text)] font-semibold leading-relaxed">
+                      {t}
+                    </span>
                   </div>
                 </div>
-              </motion.div>
+              ))}
             </div>
-          </div>
 
-          {/* Company connections strip */}
-          <div className="mt-10">
+            {/* ✅ Coordinator profile responsive */}
+            <div className="mt-9 sm:mt-10">
+              <div className="mx-auto max-w-3xl glass rounded-xl2 p-5 sm:p-6 text-center">
+                <div
+                  className="
+                    mx-auto
+                    rounded-xl2
+                    overflow-hidden
+                    shadow-glow
+                    bg-white/10
+                    ring-1 ring-white/15
+                    h-[clamp(140px,18vw,220px)]
+                    w-[clamp(140px,18vw,220px)]
+                    flex items-center justify-center
+                  "
+                >
+                  <img
+                    src={coordinatorImg}
+                    alt="Course Coordinator"
+                    className="w-full h-full object-contain scale-[1.1]"
+                  />
+                </div>
+
+
+                <div className="mt-4 font-extrabold text-[clamp(16px,1.6vw,22px)]">
+                  মো: জাহিদ পারভেজ চৌধুরী
+                </div>
+                <div className="text-[clamp(12px,1.1vw,14px)] text-[var(--muted)]">
+                  Course Coordinator
+                </div>
+
+                <div className="mt-4 text-[clamp(14px,1.4vw,18px)] text-[var(--muted)] leading-relaxed">
+                  “স্বপ্ন যদি সত্যি করতে চাও, তাহলে ভয়ের সীমানা পার হও”
+                </div>
+              </div>
+            </div>
+
+            {/* ✅ 4 stats responsive */}
+            <div className="mt-7 sm:mt-8 py-5 sm:py-6 grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-4xl mx-auto">
+              {quickFacts.map((s) => (
+                <Stat key={s.label} label={s.label} value={s.value} />
+              ))}
+            </div>
+
+            {/* ✅ Training card responsive */}
+            <div className="mt-4 sm:mt-5 glass rounded-xl2 p-4 max-w-3xl mx-auto">
+              <div className="flex items-center gap-3">
+                <div className="h-10 w-10 rounded-xl2 btn-grad animate-shimmer grid place-items-center text-white font-extrabold shrink-0">
+                  ✓
+                </div>
+                <div>
+                  <div className="font-bold text-[clamp(14px,1.3vw,16px)]">
+                    Training শেষে
+                  </div>
+                  <div className="text-[clamp(12px,1.1vw,14px)] text-[var(--muted)]">
+                    কাজের ব্যবস্থা + জব প্লেসমেন্ট গাইডলাইন
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* ✅ Remaining bullets (responsive) */}
+            {heroBullets.length > 4 && (
+              <div className="mt-7 sm:mt-8 grid gap-3 sm:grid-cols-2 max-w-3xl mx-auto text-left">
+                {heroBullets.slice(4).map((t) => (
+                  <div
+                    key={t}
+                    className="flex items-start gap-2 text-[clamp(12px,1.1vw,14px)] text-[var(--muted)]"
+                  >
+                    <CheckCircle2 className="mt-0.5 shrink-0" size={18} />
+                    <span className="leading-relaxed">{t}</span>
+                  </div>
+                ))}
+              </div>
+            )}
+          </motion.div>
+
+          {/* Company connections strip (keep as-is) */}
+          <div className="mt-10 sm:mt-12">
             <SectionTitle
               kicker="Connections"
               title="Company / Community Connections"
@@ -154,6 +197,9 @@ export default function Home(){
           </div>
         </Container>
       </section>
+
+
+
 
       {/* 🔥 DHAKA-16 MISSION SECTION */}
       <Dhaka16MissionSection />
