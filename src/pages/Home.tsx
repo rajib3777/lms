@@ -79,11 +79,11 @@ export default function Home(){
                   px-2 py-1
                   text-center
                   font-display font-extrabold
-                  text-white
+                  gradient-text
                   text-[clamp(20px,3.2vw,52px)]
                   leading-[1.15]
                   tracking-[0.01em]
-                  drop-shadow-[0_6px_18px_rgba(0,0,0,0.45)]
+                  drop-shadow-[0_4px_14px_rgba(0,0,0,0.35)]
                   mx-auto
                   max-w-6xl
                   whitespace-normal lg:whitespace-nowrap
@@ -141,110 +141,6 @@ export default function Home(){
               </div>
             </div>
 
-            {/* ✅ 4 sections responsive (no overflow) */}
-            <div className="mt-8 sm:mt-10 grid gap-3 sm:gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-              {heroBullets.slice(0, 4).map((t) => (
-                <div key={t} className="glass rounded-xl2 p-4 sm:p-4 lg:p-5 text-left">
-                  <div className="flex items-start gap-2 text-[clamp(13px,1.1vw,15px)] text-[var(--muted)]">
-                    <CheckCircle2 className="mt-0.5 shrink-0" size={18} />
-                    <span className="text-[var(--text)] font-semibold leading-relaxed">
-                      {t}
-                    </span>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            
-            
-
-            {/* ✅ Training card responsive */}
-            <div className="mt-6 sm:mt-8">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
-
-                {/* 🔹 LEFT: Training Card + Quote */}
-                <div className="flex justify-start">
-                  <div className="max-w-xl w-full">
-
-                    {/* Training Card */}
-                    <div className="glass rounded-xl2 p-4">
-                      <div className="flex items-center gap-3">
-                        <div className="h-10 w-10 rounded-xl2 btn-grad animate-shimmer grid place-items-center text-white font-extrabold shrink-0">
-                          ✓
-                        </div>
-                        <div>
-                          <div className="font-bold text-[clamp(14px,1.3vw,16px)]">
-                            Training শেষে
-                          </div>
-                          <div className="text-[clamp(12px,1.1vw,14px)] text-[var(--muted)]">
-                            কাজের ব্যবস্থা + জব প্লেসমেন্ট গাইডলাইন
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* ✅ Quote (under training card) */}
-                    <div className="mt-6 rounded-2xl border border-white/15 bg-white/5 p-6 sm:p-7 shadow-glow">
-                      <div className="flex gap-4 items-start">
-
-                        {/* Quote icon */}
-                        <div className="h-12 w-12 sm:h-14 sm:w-14 rounded-2xl bg-white/10 
-                                        grid place-items-center text-white text-3xl shrink-0">
-                          ❝
-                        </div>
-
-                        <div className="text-left">
-                          <p className="text-white italic font-medium
-                                        leading-relaxed
-                                        text-[clamp(15px,1.4vw,20px)]">
-                            আমি চাই—এই এলাকার যুবসমাজ চাকরি খুঁজবে না,
-                            <span className="block mt-1 font-semibold text-white">
-                              চাকরি তৈরি করবে।
-                            </span>
-                          </p>
-
-                          <p className="mt-4 text-white/90 italic
-                                        leading-relaxed
-                                        text-[clamp(14px,1.25vw,18px)]">
-                            আমি চাই—ঢাকা-১৬ হোক দক্ষতা, কর্মসংস্থান এবং
-                            <span className="block mt-1">
-                              সম্ভাবনার একটি রোল মডেল।
-                            </span>
-                          </p>
-
-                          {/* Signature */}
-                          <div className="mt-5 pt-4 border-t border-white/15">
-                            <div className="text-sm sm:text-base font-bold text-white">
-                              — ক্যাপ্টেন আমিনুল হক
-                            </div>
-                            <div className="text-xs sm:text-sm text-[var(--muted)]">
-                              প্রতিষ্ঠাতা ও অনুপ্রেরণা
-                            </div>
-                          </div>
-                        </div>
-
-                      </div>
-                    </div>
-
-
-                  </div>
-                </div>
-
-                {/* 🔹 RIGHT: Big Image */}
-                <div className="w-full">
-                  <div className="overflow-hidden rounded-2xl shadow-glow">
-                    <img
-                      src={pos_01}
-                      alt="Training Support"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                </div>
-
-              </div>
-            </div>
-
-
 
 
             {/* ✅ Remaining bullets (responsive) */}
@@ -263,6 +159,10 @@ export default function Home(){
             )}
           </motion.div>
 
+          {/* 🔥 DHAKA-16 MISSION SECTION */}
+          <Dhaka16MissionSection />
+
+
           {/* Company connections strip (keep as-is) */}
           <div className="mt-10 sm:mt-12">
             <SectionTitle
@@ -276,10 +176,392 @@ export default function Home(){
       </section>
 
 
+      <section className="relative py-10 sm:py-14 overflow-x-hidden">
+        <div className="container mx-auto px-4">
+
+          <div className="grid gap-6 lg:grid-cols-2 items-center">
+
+            {/* 🔹 LEFT: Image */}
+            <div className="glass rounded-xl2 p-4 shadow-glow">
+              <img
+                src={pos_03}
+                alt="Training Announcement"
+                className="w-full rounded-xl2 object-cover"
+              />
+            </div>
+
+            {/* 🔹 RIGHT: Speech / Announcement */}
+            <div className="glass rounded-xl2 p-5 sm:p-6">
+
+              <div className="font-display text-xl font-extrabold mb-4">
+                আসসালামু আলাইকুম।
+              </div>
+
+              <div className="text-left max-w-4xl space-y-4">
+
+                <p className="text-white/90 leading-relaxed text-[clamp(14px,1.15vw,16px)]">
+                  আমি <span className="font-semibold text-white">আমিনুল হক</span>,
+                  আসন্ন জাতীয় সংসদ নির্বাচনে ঢাকা-১৬ আসনে
+                  <span className="font-semibold text-white">
+                    {" "}বাংলাদেশ জাতীয়তাবাদী দল (বিএনপি)
+                  </span>{" "}
+                  মনোনীত প্রার্থী।
+                </p>
+
+                <p className="text-white/85 leading-relaxed text-[clamp(14px,1.15vw,16px)]">
+                  বাংলাদেশ জাতীয়তাবাদী দলের ঘোষিত
+                  <span className="font-semibold text-white">
+                    {" "}৩১ দফা নির্বাচনী ইশতেহারের
+                  </span>{" "}
+                  ২০ নম্বর দফায় যুবসমাজ ও কর্মসংস্থানের বিষয়ে
+                  আমাদের সুস্পষ্ট অঙ্গীকার তুলে ধরা হয়েছে।
+                  তরুণ প্রজন্মের আশা-আকাঙ্ক্ষাকে ধারণ করে
+                  যুগোপযোগী জাতীয় যুবনীতি প্রণয়নের কথাও সেখানে বলা হয়েছে।
+                </p>
+
+                <p className="text-white/85 leading-relaxed text-[clamp(14px,1.15vw,16px)]">
+                  একইসাথে বেকার যুবকদের জন্য
+                  <span className="font-semibold text-white">
+                    {" "}কর্মসংস্থান নিশ্চিত না হওয়া পর্যন্ত বেকার ভাতা,
+                  </span>{" "}
+                  প্রযুক্তি-ভিত্তিক বাস্তবসম্মত উদ্যোগের মাধ্যমে
+                  বেকারত্ব দূর করা এবং তরুণদের
+                  <span className="font-semibold text-white">
+                    {" "}দক্ষ ও উৎপাদনশীল সম্পদে রূপান্তর
+                  </span>{" "}
+                  করার অঙ্গীকার করা হয়েছে।
+                </p>
+
+                {/* Highlight Box */}
+                <div className="mt-5 rounded-xl border border-white/15 bg-white/5 p-4 shadow-soft">
+                  <p className="text-white font-semibold leading-relaxed
+                                text-[clamp(15px,1.2vw,18px)]">
+                    আগামী <span className="font-extrabold text-white">
+                      ২২ জানুয়ারি ২০২৬
+                    </span>{" "}
+                    থেকে ঢাকা-১৬ (পল্লবী–রূপনগর) এলাকার যুবক-যুবতীদের জন্য
+                    আমার নিজস্ব আইটি প্রতিষ্ঠানের মাধ্যমে
+                    <span className="font-extrabold text-white">
+                      {" "}সম্পূর্ণ বিনামূল্যে আইটি প্রশিক্ষণ
+                    </span>{" "}
+                    কার্যক্রম আনুষ্ঠানিকভাবে শুরু হতে যাচ্ছে।
+                  </p>
+                </div>
+
+                {/* Skills List */}
+                <div className="mt-6">
+                  <div className="text-white font-bold mb-3
+                                  text-[clamp(15px,1.25vw,18px)]">
+                    এই প্রশিক্ষণের আওতায় যুবক-যুবতীরা বিনামূল্যে শিখতে পারবে—
+                  </div>
+
+                  <ul className="grid sm:grid-cols-2 gap-3
+                                text-white/90
+                                text-[clamp(14px,1.1vw,16px)]">
+                    {[
+                      "গ্রাফিক ডিজাইন",
+                      "ডিজিটাল মার্কেটিং",
+                      "ওয়েব ডিজাইন ও ডেভেলপমেন্ট",
+                      "ভিডিও এডিটিং",
+                    ].map((item) => (
+                      <li key={item} className="flex items-center gap-2">
+                        <span className="h-2 w-2 rounded-full bg-white/70" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+              </div>
+
+              {/* CTA */}
+              <div className="mt-6 flex gap-3 flex-col sm:flex-row">
+                <Link to="/about">
+                  <AnimatedButton variant="ghost">
+                    Institute Info
+                  </AnimatedButton>
+                </Link>
+                <a href="#enroll">
+                  <AnimatedButton>
+                    Enroll
+                  </AnimatedButton>
+                </a>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </section>
 
 
-      {/* 🔥 DHAKA-16 MISSION SECTION */}
-      <Dhaka16MissionSection />
+
+
+      
+      <div className="px-4 sm:px-8 lg:px-12 mt-6 sm:mt-10">
+        <div className="relative max-w-6xl mx-auto">
+
+          {/* ✅ Mobile: Image first */}
+          <div className="lg:hidden overflow-hidden rounded-3xl shadow-soft ring-1 ring-white/10 mb-4">
+            <img
+              src={pos_01}
+              alt="Training Support"
+              className="w-full h-[clamp(260px,60vw,380px)] object-cover"
+            />
+          </div>
+
+          {/* ✅ Speech Card */}
+          <div
+            className="
+              relative
+              rounded-3xl
+              border border-white/15
+              bg-white/5
+              shadow-soft        /* 🔻 glow → soft */
+              overflow-visible
+              p-6 sm:p-8
+              lg:pr-[380px]      /* 🔺 more space for bigger image */
+              lg:min-h-[620px]
+            "
+          >
+            {/* header */}
+            <div className="flex items-center gap-3 mb-6">
+              <div className="h-12 w-12 sm:h-14 sm:w-14 rounded-2xl bg-white/10 grid place-items-center text-white text-3xl shrink-0">
+                ❝
+              </div>
+              <div>
+                <div className="text-white font-extrabold text-[clamp(14px,1.1vw,16px)] tracking-wide">
+                  আমার বার্তা
+                </div>
+                <div className="text-[var(--muted)] text-[clamp(12px,1vw,14px)]">
+                  ঢাকা-১৬ যুবসমাজের জন্য
+                </div>
+              </div>
+            </div>
+
+            {/* speech */}
+            <div className="text-left max-w-3xl">
+              <p className="text-white font-semibold italic leading-[1.35] text-[clamp(15px,1.5vw,25px)]">
+                আমি বিশ্বাস করি—রাজনীতি মানে শুধু প্রতিশ্রুতি নয়, রাজনীতি মানে কাজ।
+                আর সেই বিশ্বাস থেকেই আমি আমার নির্বাচনী প্রচারণা শুরু করছি কথা দিয়ে নয়, কাজ দিয়ে।
+                <span className="block mt-2 text-white font-extrabold not-italic">
+                  আমি স্পষ্ট করে বলতে চাই—
+                  আমি নির্বাচিত জয়ী হলে, ঢাকা-১৬ পল্লবী-রূপনগরের মানুষের প্রতি আমার প্রতিটি প্রতিশ্রুতি আমি বাস্তবায়ন করবো।
+                  কারণ এটি কোনো নির্বাচনী স্টান্ট নয়, এটি আমার দায়িত্ববোধের প্রকাশ।
+                </span>
+              </p>
+
+              <p className="mt-5 text-white/90 italic leading-[1.6] text-[clamp(14px,1.25vw,18px)]">
+                একই সঙ্গে যারা প্রশিক্ষণভিত্তিক নতুন আইডিয়া নিয়ে উদ্যোক্তা হতে চায়,
+                প্রজেক্ট ডেভেলপ করতে চায়—তাদের জন্য দেশ-বিদেশের বিভিন্ন প্রতিষ্ঠান ও
+                বিনিয়োগকারীদের সঙ্গে সংযোগ স্থাপন করা হবে, যাতে তারা বিনিয়োগ পায়
+                এবং স্বাবলম্বী হতে পারে।
+              </p>
+
+              {/* signature */}
+              <div className="mt-8 pt-5 border-t border-white/15">
+                <div className="text-white font-extrabold text-[clamp(14px,1.15vw,18px)]">
+                  — ক্যাপ্টেন আমিনুল হক
+                </div>
+                <div className="text-[var(--muted)] text-[clamp(12px,1vw,14px)]">
+                  প্রতিষ্ঠাতা ও অনুপ্রেরণা
+                </div>
+              </div>
+            </div>
+
+            {/* ✅ Desktop: Bigger Overlap Image */}
+            <div className="hidden lg:block absolute right-0 bottom-0 translate-x-10 translate-y-10">
+              <div className="overflow-hidden rounded-3xl shadow-soft ring-1 ring-white/10
+                              w-[420px] h-[520px]">
+                <img
+                  src={pos_02}
+                  alt="Training Support"
+                  className="w-full h-full object-cover object-center"
+                />
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+      <section id="women-empowerment" className="mt-4 relative overflow-x-hidden py-10 sm:py-14">
+        <Container>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10 items-start">
+
+            {/* ✅ Mobile first: Image */}
+            <div className="order-1 lg:order-2">
+              <div className="overflow-hidden rounded-3xl shadow-glow ring-1 ring-white/10">
+                <img
+                  src={womenImg}
+                  alt="নারীর ক্ষমতায়ন"
+                  className="w-full h-full object-cover object-center"
+                />
+              </div>
+              <p className="mt-3 text-center text-sm text-[var(--muted)]">
+                দক্ষতা, আত্মবিশ্বাস, ও সুযোগ—এটাই নারীর এগিয়ে যাওয়ার শক্তি।
+              </p>
+            </div>
+
+            {/* ✅ Content */}
+            <div className="order-2 lg:order-1">
+              <div className="glass rounded-3xl p-6 sm:p-8 shadow-soft ring-1 ring-white/10">
+                <div className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-bold text-white/90">
+                  নারীর ক্ষমতায়ন
+                </div>
+
+                <h2 className="mt-4 font-display font-extrabold text-white leading-[1.15]
+                              text-[clamp(24px,3.2vw,44px)]">
+                  দক্ষ নারী মানেই শক্তিশালী পরিবার, শক্তিশালী সমাজ
+                </h2>
+
+                <p className="mt-4 text-white/85 leading-relaxed text-[clamp(14px,1.15vw,16px)]">
+                  আমরা বিশ্বাস করি—নারীর ক্ষমতায়ন মানে শুধু বক্তব্য নয়; মানে শিক্ষা, দক্ষতা,
+                  নিরাপদ কর্মপরিবেশ এবং বাস্তব সুযোগ তৈরি করা। ঢাকা-১৬ এলাকার নারীদের জন্য
+                  এমন একটি পথ তৈরি করতে চাই, যেখানে তারা স্বাবলম্বী হয়ে নিজস্ব ক্যারিয়ার গড়তে পারে।
+                </p>
+
+                {/* ✅ Points */}
+                <div className="mt-6 grid gap-3">
+                  {[
+                    "নারীদের জন্য দক্ষতা-ভিত্তিক প্রশিক্ষণ: গ্রাফিক ডিজাইন, ডিজিটাল মার্কেটিং, ওয়েব, ভিডিও এডিটিং",
+                    "ঘরে বসে আয়ের সুযোগ: ফ্রিল্যান্সিং ও অনলাইন সার্ভিস",
+                    "ক্যারিয়ার গাইডলাইন ও মেন্টরশিপ—শুধু শেখানো নয়, হাতে-কলমে সাপোর্ট",
+                    "উদ্যোক্তা হতে সহায়তা: প্রজেক্ট, নেটওয়ার্কিং, ও বাস্তব দিকনির্দেশনা",
+                    "সম্মানজনক ও নিরাপদ পরিবেশ—নারীদের আত্মবিশ্বাসই আমাদের অগ্রাধিকার",
+                  ].map((t, i) => (
+                    <div
+                      key={i}
+                      className="rounded-2xl border border-white/10 bg-white/5 p-4"
+                    >
+                      <div className="flex items-start gap-3">
+                        <span className="mt-2 h-2.5 w-2.5 rounded-full bg-white/70 shrink-0" />
+                        <p className="text-white/90 leading-relaxed">{t}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                {/* ✅ Small highlight line */}
+                <div className="mt-7 rounded-2xl border border-white/10 bg-white/5 p-4">
+                  <p className="text-white font-semibold leading-relaxed">
+                    লক্ষ্য একটাই—নারীরা চাকরি খুঁজবে না, <span className="font-extrabold">দক্ষতা অর্জন করে সুযোগ তৈরি করবে</span>।
+                  </p>
+                  <p className="mt-1 text-[var(--muted)] text-sm">
+                    একটি নারীর সাফল্য মানেই একটি পরিবারের ভবিষ্যৎ আরও আলোকিত।
+                  </p>
+                </div>
+
+                {/* ✅ Optional: simple buttons (no icons) */}
+                <div className="mt-7 flex flex-col sm:flex-row gap-3">
+                  <a href="#enroll" className="w-full sm:w-auto">
+                    <AnimatedButton className="w-full sm:w-auto">
+                      রেজিস্ট্রেশন করুন
+                    </AnimatedButton>
+                  </a>
+                  <a href="#demo" className="w-full sm:w-auto">
+                    <AnimatedButton variant="ghost" className="w-full sm:w-auto">
+                      ডেমো ক্লাস দেখুন
+                    </AnimatedButton>
+                  </a>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </Container>
+      </section>
+
+
+
+      
+      <section className="mt-4 relative overflow-x-hidden py-8 sm:py-12">
+        <div className="container mx-auto px-4">
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
+
+            {/* 🔹 LEFT: Training Card + Speech */}
+            <div className="flex justify-start">
+              <div className="max-w-xl w-full">
+
+                {/* Training Card */}
+                <div className="glass rounded-xl2 p-4 shadow-soft">
+                  <div className="flex items-center gap-3">
+                    <div className="h-10 w-10 rounded-xl2 btn-grad animate-shimmer grid place-items-center text-white font-extrabold shrink-0">
+                      ✓
+                    </div>
+                    <div>
+                      <div className="font-bold text-[clamp(14px,1.3vw,16px)]">
+                        Training শেষে
+                      </div>
+                      <div className="text-[clamp(12px,1.1vw,14px)] text-[var(--muted)]">
+                        কাজের ব্যবস্থা + জব প্লেসমেন্ট গাইডলাইন
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Speech / Quote */}
+                <div className="mt-6 rounded-2xl border border-white/15 bg-white/5 p-6 sm:p-7 shadow-glow">
+                  <div className="flex gap-4 items-start">
+
+                    <div className="h-12 w-12 sm:h-14 sm:w-14 rounded-2xl bg-white/10 
+                                    grid place-items-center text-white text-3xl shrink-0">
+                      ❝
+                    </div>
+
+                    <div className="text-left">
+                      <p className="text-white italic font-medium leading-relaxed
+                                    text-[clamp(15px,1.4vw,20px)]">
+                        আমি চাই—এই এলাকার যুবসমাজ চাকরি খুঁজবে না,
+                        <span className="block mt-1 font-semibold text-white">
+                          চাকরি তৈরি করবে।
+                        </span>
+                      </p>
+
+                      <p className="mt-4 text-white/90 italic leading-relaxed
+                                    text-[clamp(14px,1.25vw,18px)]">
+                        আমি চাই—ঢাকা-১৬ হোক দক্ষতা, কর্মসংস্থান এবং
+                        <span className="block mt-1">
+                          সম্ভাবনার একটি রোল মডেল।
+                        </span>
+                      </p>
+
+                      <div className="mt-5 pt-4 border-t border-white/15">
+                        <div className="text-sm sm:text-base font-bold text-white">
+                          — ক্যাপ্টেন আমিনুল হক
+                        </div>
+                        <div className="text-xs sm:text-sm text-[var(--muted)]">
+                          প্রতিষ্ঠাতা ও অনুপ্রেরণা
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            {/* 🔹 RIGHT: Image */}
+            <div className="w-full">
+              <div className="overflow-hidden rounded-2xl shadow-glow">
+                <img
+                  src={pos_01}
+                  alt="Training & Inspiration"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
 
 
       {/* COORDINATOR SHOWCASE SECTION */}
@@ -387,98 +669,7 @@ export default function Home(){
         </Container>
       </section>
 
-      
-      <div className="px-4 sm:px-8 lg:px-12 mt-6 sm:mt-10">
-        <div className="relative max-w-6xl mx-auto">
-
-          {/* ✅ Mobile: Image first */}
-          <div className="lg:hidden overflow-hidden rounded-3xl shadow-glow ring-1 ring-white/10 mb-4">
-            <img
-              src={pos_01}
-              alt="Training Support"
-              className="w-full h-[clamp(240px,55vw,360px)] object-cover"
-            />
-          </div>
-
-          {/* ✅ Speech Card */}
-          <div
-            className="
-              relative
-              rounded-3xl
-              border border-white/15
-              bg-white/5
-              shadow-glow
-              overflow-visible
-              p-6 sm:p-8
-              lg:pr-[300px]
-              lg:min-h-[560px]
-            "
-          >
-            {/* header */}
-            <div className="flex items-center gap-3 mb-6">
-              <div className="h-12 w-12 sm:h-14 sm:w-14 rounded-2xl bg-white/10 grid place-items-center text-white text-3xl shrink-0">
-                ❝
-              </div>
-              <div>
-                <div className="text-white font-extrabold text-[clamp(14px,1.1vw,16px)] tracking-wide">
-                  আমার বার্তা
-                </div>
-                <div className="text-[var(--muted)] text-[clamp(12px,1vw,14px)]">
-                  ঢাকা-১৬ যুবসমাজের জন্য
-                </div>
-              </div>
-            </div>
-
-            {/* speech */}
-            <div className="text-left max-w-3xl">
-              <p className="text-white font-semibold italic leading-[1.35] text-[clamp(18px,1.9vw,30px)]">
-                আমি বিশ্বাস করি—রাজনীতি মানে শুধু প্রতিশ্রুতি নয়, রাজনীতি মানে কাজ।
-                আর সেই বিশ্বাস থেকেই আমি আমার নির্বাচনী প্রচারণা শুরু করছি কথা দিয়ে নয়, কাজ দিয়ে।
-                <span className="block mt-2 text-white font-extrabold not-italic">
-                  আমি স্পষ্ট করে বলতে চাই—
-                  আমি নির্বাচিত জয়ী হলে, ঢাকা-১৬ পল্লবী-রূপনগরের মানুষের প্রতি আমার প্রতিটি প্রতিশ্রুতি আমি বাস্তবায়ন করবো। কারণ এটি কোনো নির্বাচনী স্টান্ট নয়, এটি আমার দায়িত্ববোধের প্রকাশ।
-                </span>
-              </p>
-
-              <p className="mt-5 text-white/90 italic leading-[1.6] text-[clamp(14px,1.25vw,18px)]">
-                একই সঙ্গে যারা প্রশিক্ষণভিত্তিক নতুন আইডিয়া নিয়ে উদ্যোক্তা হতে চায়, প্রজেক্ট ডেভেলপ করতে চায়—তাদের জন্য দেশ-বিদেশের বিভিন্ন প্রতিষ্ঠান ও বিনিয়োগকারীদের সঙ্গে সংযোগ স্থাপন করা হবে, যাতে তারা বিনিয়োগ পায় এবং স্বাবলম্বী হতে পারে।
-                <span className="block mt-1">
-                  সম্ভাবনার একটি রোল মডেল।
-                </span>
-              </p>
-
-              {/* signature */}
-              <div className="mt-8 pt-5 border-t border-white/15">
-                <div className="text-white font-extrabold text-[clamp(14px,1.15vw,18px)]">
-                  — ক্যাপ্টেন আমিনুল হক
-                </div>
-                <div className="text-[var(--muted)] text-[clamp(12px,1vw,14px)]">
-                  প্রতিষ্ঠাতা ও অনুপ্রেরণা
-                </div>
-              </div>
-            </div>
-
-            {/* ✅ Desktop: Overlap image (taller & aligned) */}
-            <div className="hidden lg:block absolute right-0 bottom-0 translate-x-8 translate-y-8">
-              <div className="overflow-hidden rounded-3xl shadow-glow ring-1 ring-white/10 w-[360px] h-[420px]">
-                <img
-                  src={pos_02}
-                  alt="Training Support"
-                  className="w-full h-full object-cover object-center"
-                />
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-
-
-
-
-
-        
+    
 
       {/* COURSES */}
       <section className="mt-6">
@@ -599,89 +790,6 @@ export default function Home(){
             ))}
           </div>
 
-          <div className="mt-10 grid gap-6 lg:grid-cols-2 items-center">
-            <div className="glass rounded-xl2 p-4 shadow-glow">
-              <img src={pos_03} alt="Poster" className="w-full rounded-xl2 object-cover" />
-            </div>
-            <div className="glass rounded-xl2 p-5">
-              <div className="font-display text-xl font-extrabold">আসসালামু আলাইকুম।</div>
-                <div className="mt-4 text-left max-w-4xl">
-                  <p className="text-white/90 leading-relaxed text-[clamp(14px,1.15vw,16px)]">
-                    আমি <span className="font-semibold text-white">আমিনুল হক</span>,
-                    আসন্ন জাতীয় সংসদ নির্বাচনে ঢাকা-১৬ আসনে
-                    <span className="font-semibold text-white">
-                      {" "}বাংলাদেশ জাতীয়তাবাদী দল (বিএনপি)
-                    </span>{" "}
-                    মনোনীত প্রার্থী।
-                  </p>
-
-                  <p className="mt-4 text-white/85 leading-relaxed text-[clamp(14px,1.15vw,16px)]">
-                    বাংলাদেশ জাতীয়তাবাদী দলের ঘোষিত
-                    <span className="font-semibold text-white"> ৩১ দফা নির্বাচনী ইশতেহারের </span>
-                    ২০ নম্বর দফায় যুবসমাজ ও কর্মসংস্থানের বিষয়ে আমাদের
-                    সুস্পষ্ট অঙ্গীকার তুলে ধরা হয়েছে।
-                    সেখানে তরুণ প্রজন্মের আশা-আকাঙ্ক্ষাকে ধারণ করে
-                    যুগোপযোগী জাতীয় যুবনীতি প্রণয়নের কথা বলা হয়েছে।
-                  </p>
-
-                  <p className="mt-4 text-white/85 leading-relaxed text-[clamp(14px,1.15vw,16px)]">
-                    একইসাথে বেকার যুবকদের জন্য
-                    <span className="font-semibold text-white">
-                      {" "}কর্মসংস্থান নিশ্চিত না হওয়া পর্যন্ত বেকার ভাতা,
-                    </span>{" "}
-                    বহুমুখী ও বাস্তবসম্মত প্রযুক্তি-ভিত্তিক উদ্যোগের মাধ্যমে
-                    বেকারত্ব দূর করা এবং তরুণদের
-                    <span className="font-semibold text-white">
-                      {" "}দক্ষ ও উৎপাদনশীল সম্পদে রূপান্তর
-                    </span>{" "}
-                    করার অঙ্গীকার করা হয়েছে।
-                  </p>
-
-                  {/* Highlight announcement */}
-                  <div className="mt-6 rounded-xl border border-white/15 bg-white/5 p-4">
-                    <p className="text-white font-semibold text-[clamp(15px,1.2vw,18px)] leading-relaxed">
-                      আগামী <span className="text-white font-extrabold">২২ জানুয়ারি ২০২৬</span>{" "}
-                      থেকে ঢাকা-১৬ (পল্লবী–রূপনগর) এলাকার যুবক-যুবতীদের জন্য
-                      আমার নিজস্ব আইটি প্রতিষ্ঠানের মাধ্যমে
-                      <span className="text-white font-extrabold">
-                        {" "}সম্পূর্ণ বিনামূল্যে আইটি প্রশিক্ষণ
-                      </span>{" "}
-                      কার্যক্রম আনুষ্ঠানিকভাবে শুরু হতে যাচ্ছে।
-                    </p>
-                  </div>
-
-                  {/* Bullet skills */}
-                  <div className="mt-6">
-                    <div className="text-white font-bold mb-3 text-[clamp(15px,1.25vw,18px)]">
-                      এই প্রশিক্ষণের আওতায় যুবক-যুবতীরা বিনামূল্যে শিখতে পারবে—
-                    </div>
-
-                    <ul className="grid sm:grid-cols-2 gap-3 text-white/90 text-[clamp(14px,1.1vw,16px)]">
-                      <li className="flex items-center gap-2">
-                        <span className="h-2 w-2 rounded-full bg-white/70" />
-                        গ্রাফিক ডিজাইন
-                      </li>
-                      <li className="flex items-center gap-2">
-                        <span className="h-2 w-2 rounded-full bg-white/70" />
-                        ডিজিটাল মার্কেটিং
-                      </li>
-                      <li className="flex items-center gap-2">
-                        <span className="h-2 w-2 rounded-full bg-white/70" />
-                        ওয়েব ডিজাইন ও ডেভেলপমেন্ট
-                      </li>
-                      <li className="flex items-center gap-2">
-                        <span className="h-2 w-2 rounded-full bg-white/70" />
-                        ভিডিও এডিটিং
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              <div className="mt-4 flex gap-3">
-                <Link to="/about"><AnimatedButton variant="ghost">Institute Info</AnimatedButton></Link>
-                <a href="#enroll"><AnimatedButton>Enroll</AnimatedButton></a>
-              </div>
-            </div>
-          </div>
         </Container>
       </section>
 
@@ -725,93 +833,65 @@ export default function Home(){
         </Container>
       </section>
 
-      <section id="women-empowerment" className="relative overflow-x-hidden py-10 sm:py-14">
-        <Container>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10 items-start">
+      {/* ✅ Key Highlights */}
+      <div className="px-4 mt-10 sm:mt-12">
+        <div
+          className="
+            grid
+            grid-cols-1
+            sm:grid-cols-2
+            lg:grid-cols-4
+            gap-4
+          "
+        >
+          {heroBullets.slice(0, 4).map((t, i) => (
+            <div
+              key={t}
+              className="
+                relative
+                glass
+                rounded-2xl
+                p-5
+                shadow-soft
+                hover:shadow-glow
+                transition
+                duration-300
+              "
+            >
+              {/* soft accent */}
+              <div className="absolute -top-6 -right-6 h-16 w-16 rounded-full bg-white/5 blur-2xl" />
 
-            {/* ✅ Mobile first: Image */}
-            <div className="order-1 lg:order-2">
-              <div className="overflow-hidden rounded-3xl shadow-glow ring-1 ring-white/10">
-                <img
-                  src={womenImg}
-                  alt="নারীর ক্ষমতায়ন"
-                  className="w-full h-full object-cover object-center"
-                />
-              </div>
-              <p className="mt-3 text-center text-sm text-[var(--muted)]">
-                দক্ষতা, আত্মবিশ্বাস, ও সুযোগ—এটাই নারীর এগিয়ে যাওয়ার শক্তি।
-              </p>
-            </div>
-
-            {/* ✅ Content */}
-            <div className="order-2 lg:order-1">
-              <div className="glass rounded-3xl p-6 sm:p-8 shadow-soft ring-1 ring-white/10">
-                <div className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-bold text-white/90">
-                  নারীর ক্ষমতায়ন
+              <div className="flex items-start gap-3">
+                {/* icon */}
+                <div className="
+                  h-9 w-9
+                  rounded-xl2
+                  bg-white/10
+                  grid place-items-center
+                  shrink-0
+                ">
+                  <CheckCircle2 size={18} className="text-white/90" />
                 </div>
 
-                <h2 className="mt-4 font-display font-extrabold text-white leading-[1.15]
-                              text-[clamp(24px,3.2vw,44px)]">
-                  দক্ষ নারী মানেই শক্তিশালী পরিবার, শক্তিশালী সমাজ
-                </h2>
-
-                <p className="mt-4 text-white/85 leading-relaxed text-[clamp(14px,1.15vw,16px)]">
-                  আমরা বিশ্বাস করি—নারীর ক্ষমতায়ন মানে শুধু বক্তব্য নয়; মানে শিক্ষা, দক্ষতা,
-                  নিরাপদ কর্মপরিবেশ এবং বাস্তব সুযোগ তৈরি করা। ঢাকা-১৬ এলাকার নারীদের জন্য
-                  এমন একটি পথ তৈরি করতে চাই, যেখানে তারা স্বাবলম্বী হয়ে নিজস্ব ক্যারিয়ার গড়তে পারে।
-                </p>
-
-                {/* ✅ Points */}
-                <div className="mt-6 grid gap-3">
-                  {[
-                    "নারীদের জন্য দক্ষতা-ভিত্তিক প্রশিক্ষণ: গ্রাফিক ডিজাইন, ডিজিটাল মার্কেটিং, ওয়েব, ভিডিও এডিটিং",
-                    "ঘরে বসে আয়ের সুযোগ: ফ্রিল্যান্সিং ও অনলাইন সার্ভিস",
-                    "ক্যারিয়ার গাইডলাইন ও মেন্টরশিপ—শুধু শেখানো নয়, হাতে-কলমে সাপোর্ট",
-                    "উদ্যোক্তা হতে সহায়তা: প্রজেক্ট, নেটওয়ার্কিং, ও বাস্তব দিকনির্দেশনা",
-                    "সম্মানজনক ও নিরাপদ পরিবেশ—নারীদের আত্মবিশ্বাসই আমাদের অগ্রাধিকার",
-                  ].map((t, i) => (
-                    <div
-                      key={i}
-                      className="rounded-2xl border border-white/10 bg-white/5 p-4"
-                    >
-                      <div className="flex items-start gap-3">
-                        <span className="mt-2 h-2.5 w-2.5 rounded-full bg-white/70 shrink-0" />
-                        <p className="text-white/90 leading-relaxed">{t}</p>
-                      </div>
-                    </div>
-                  ))}
+                {/* text */}
+                <div>
+                  <div
+                    className="
+                      text-[clamp(14px,1.15vw,16px)]
+                      font-semibold
+                      text-white
+                      leading-relaxed
+                    "
+                  >
+                    {t}
+                  </div>
                 </div>
-
-                {/* ✅ Small highlight line */}
-                <div className="mt-7 rounded-2xl border border-white/10 bg-white/5 p-4">
-                  <p className="text-white font-semibold leading-relaxed">
-                    লক্ষ্য একটাই—নারীরা চাকরি খুঁজবে না, <span className="font-extrabold">দক্ষতা অর্জন করে সুযোগ তৈরি করবে</span>।
-                  </p>
-                  <p className="mt-1 text-[var(--muted)] text-sm">
-                    একটি নারীর সাফল্য মানেই একটি পরিবারের ভবিষ্যৎ আরও আলোকিত।
-                  </p>
-                </div>
-
-                {/* ✅ Optional: simple buttons (no icons) */}
-                <div className="mt-7 flex flex-col sm:flex-row gap-3">
-                  <a href="#enroll" className="w-full sm:w-auto">
-                    <AnimatedButton className="w-full sm:w-auto">
-                      রেজিস্ট্রেশন করুন
-                    </AnimatedButton>
-                  </a>
-                  <a href="#demo" className="w-full sm:w-auto">
-                    <AnimatedButton variant="ghost" className="w-full sm:w-auto">
-                      ডেমো ক্লাস দেখুন
-                    </AnimatedButton>
-                  </a>
-                </div>
-
               </div>
             </div>
+          ))}
+        </div>
+      </div>
 
-          </div>
-        </Container>
-      </section>
 
 
       {/* REVIEWS */}
@@ -914,67 +994,6 @@ export default function Home(){
           </div>
         </Container>
       </section>
-
-      <section id="child-education" className="relative overflow-x-hidden py-10 sm:py-14">
-        <Container>
-          <div className="overflow-hidden rounded-3xl shadow-glow ring-1 ring-white/10">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
-
-              {/* ✅ Image (no gap) */}
-              <div className="w-full bg-[#0f5f4a] flex items-center justify-center">
-                <img
-                  src={childEduImg}
-                  alt="শিক্ষা ও দক্ষতা"
-                  className="w-full h-auto object-contain"
-                />
-              </div>
-              {/* ✅ Message (no gap) */}
-              <div className="bg-black/25 backdrop-blur-sm p-6 sm:p-8 lg:p-10">
-                <div className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-bold text-white/90">
-                  শিশুদের শিক্ষা ও দক্ষতা
-                </div>
-
-                <h2 className="mt-4 font-display font-extrabold text-white leading-[1.15]
-                              text-[clamp(22px,3vw,40px)]">
-                  আলোকিত ভবিষ্যৎ গড়তে শিক্ষা—আর স্বাবলম্বী হতে দক্ষতা
-                </h2>
-
-                <p className="mt-4 text-white/85 leading-relaxed text-[clamp(14px,1.15vw,16px)]">
-                  আমাদের দেশের শিক্ষার্থীদের উজ্জ্বল ভবিষ্যৎ গঠনে প্রয়োজনীয় সব উদ্যোগ গ্রহণ
-                  এবং প্রতিটি যৌক্তিক চাহিদা ও সমস্যার সমাধান নিশ্চিত করাই আমাদের অঙ্গীকার।
-                  কারণ—আজকের শিক্ষার্থীই আগামী দিনের নেতৃত্ব, সম্ভাবনা, এবং উন্নয়নের চালিকাশক্তি।
-                </p>
-
-                <div className="mt-6 grid gap-3">
-                  {[
-                    "প্রতিটি শিশুর মানসম্মত শিক্ষার নিশ্চয়তা—সহজে, সম্মানের সাথে",
-                    "প্রযুক্তি-ভিত্তিক শিক্ষা সহায়তা ও নিয়মিত দিকনির্দেশনা",
-                    "পড়াশোনার পাশাপাশি জীবনমুখী দক্ষতা: যোগাযোগ, নেতৃত্ব, সমস্যা সমাধান",
-                    "দরিদ্র ও সুবিধাবঞ্চিত শিক্ষার্থীদের জন্য বিশেষ সহায়তা ও সুযোগ",
-                    "পরিবার–বিদ্যালয়–সমাজ একসাথে কাজ করে ‘সেফ ও সাপোর্টিভ’ পরিবেশ তৈরি",
-                  ].map((t, i) => (
-                    <div key={i} className="rounded-2xl border border-white/10 bg-white/5 p-4">
-                      <div className="flex items-start gap-3">
-                        <span className="mt-2 h-2.5 w-2.5 rounded-full bg-white/70 shrink-0" />
-                        <p className="text-white/90 leading-relaxed">{t}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-
-                <div className="mt-7 rounded-2xl border border-white/10 bg-white/5 p-4">
-                  <p className="text-white font-semibold leading-relaxed">
-                    লক্ষ্য একটাই—শিক্ষার্থীরা শুধু স্বপ্ন দেখবে না,
-                    <span className="font-extrabold"> দক্ষতা অর্জন করে স্বপ্ন বাস্তব করবে</span>।
-                  </p>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </Container>
-      </section>
-
 
       {/* BLOG PREVIEW */}
       <section>
