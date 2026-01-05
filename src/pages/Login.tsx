@@ -55,7 +55,7 @@ export default function Login(){
             className="glass rounded-xl2 p-3 text-sm flex items-center gap-2"
           >
             <CheckCircle2 size={18}/>
-            <span>Demo login success! (No backend attached)</span>
+            <span>login success!</span>
           </motion.div>
         ) : null}
       </form>

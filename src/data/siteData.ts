@@ -11,7 +11,7 @@ export type Course = {
 
 export const slogan = {
   headline: "দক্ষতা উন্নয়নের মাধ্যমে কর্মসংস্থান, কর্মসংস্থানের মাধ্যমে শক্তিশালী ঢাকা-১৬",
-  sub: "Digital Marketing & Entrepreneurship-এর জন্য একদম ইন্ডাস্ট্রি-রেডি বুটক্যাম্প। লাইভ ক্লাস, ডেমো ক্লাস, সাপোর্ট, গাইডলাইন—সব একসাথে।"
+  sub: "Digital Marketing & Entrepreneurship-এর জন্য একদম ইন্ডাস্ট্রি-রেডি বুটক্যাম্প। লাইভ ক্লাস, ক্লাস, সাপোর্ট, গাইডলাইন—সব একসাথে।"
 };
 
 export const heroBullets = [
@@ -49,26 +49,7 @@ export const courses: Course[] = [
     includes: ["Business Model Canvas", "Store Setup", "Content Plan", "Sales Funnel", "Delivery & Customer Care SOP"],
     priceTag: "Free Batch"
   },
-  {
-    id: "gd",
-    title: "Graphic Design for Business",
-    subtitle: "Canva • Photoshop Basics • Brand Kit",
-    level: "Beginner",
-    duration: "6 month",
-    seats: "Limited Seats",
-    includes: ["Social Media Kit", "Ad Creative", "Brand Consistency", "Export & Delivery", "Design Feedback & Iteration"],
-    priceTag: "Free Batch"
-  },
-  {
-    id: "ve",
-    title: "Video Editing for Ads",
-    subtitle: "Shorts/Reels • Motion Basics • Hooks",
-    level: "Intermediate",
-    duration: "6 month",
-    seats: "Limited Seats",
-    includes: ["Reels Template", "Sound & Beat", "Caption Workflow", "Ad-Ready Export", "Hook & Storyboard Practice"],
-    priceTag: "Free Batch"
-  }
+  
 ];
 
 export const teachers = [
@@ -90,17 +71,17 @@ export const teachers = [
 ];
 
 export const demoClasses = [
-  { title: "Demo Class 01: Ad Funnel Basics", date: "10 Jun, 2026", time: "8:30 PM", topic: "Funnel + Audience + Creative" },
-  { title: "Demo Class 02: SEO Quick Wins", date: "12 Jun, 2026", time: "8:30 PM", topic: "On-page + Keyword + Content" },
-  { title: "Demo Class 03: Business Model Setup", date: "14 Jun, 2026", time: "8:30 PM", topic: "Offer + Pricing + Delivery" }
+  { title: "Class 01: Ad Funnel Basics", date: "10 Jun, 2026", time: "8:30 PM", topic: "Funnel + Audience + Creative" },
+  { title: "Class 02: SEO Quick Wins", date: "12 Jun, 2026", time: "8:30 PM", topic: "On-page + Keyword + Content" },
+  { title: "Class 03: Business Model Setup", date: "14 Jun, 2026", time: "8:30 PM", topic: "Offer + Pricing + Delivery" }
 ];
 
 export const plans = [
   {
     name: "Digital marketing Bootcamp (DM)",
     price: "৳ 0",
-    tag: "ফ্রি ডেমো",
-    points: ["ডেমো ক্লাস অ্যাক্সেস", "কোর্স আউটলাইন", "কমিউনিটি ইন্ট্রো", "ক্যারিয়ার রোডম্যাপ"],
+    tag: "ফ্রি class",
+    points: ["ক্লাস অ্যাক্সেস", "কোর্স আউটলাইন", "কমিউনিটি ইন্ট্রো", "ক্যারিয়ার রোডম্যাপ"],
     accent: "from-[var(--grad-a)] to-[var(--grad-b)]"
   },
   {
@@ -110,13 +91,6 @@ export const plans = [
     points: ["লাইভ ব্যাচ", "প্রজেক্ট + ফিডব্যাক", "সাপোর্ট চ্যাট", "সার্টিফিকেট", "সাপ্তাহিক রিভিউ কল"],
     accent: "from-[var(--grad-b)] to-[var(--grad-c)]"
   },
-  {
-    name: "Didgital Pro Pack (DM + Ecom + GD + VE)",
-    price: "৳ 0",
-    tag: "Job/Client Ready",
-    points: ["Entrepreneurship", "সব Pro সুবিধা", "CV/Portfolio", "Mock Interview", "Client Hunting Playbook", "ইন্টার্নশিপ গাইডলাইন"],
-    accent: "from-[var(--grad-c)] to-[var(--grad-d)]"
-  }
 ];
 
 export const testimonials = [
@@ -179,13 +153,18 @@ export const rocketSteps = [
   },
   {
     step: "Step 03",
-    title: "Project Sprint",
+    title: "200 Course Credit",
     desc: "Real project: campaign, store, creative set—mentor review সহ।"
   },
   {
     step: "Step 04",
-    title: "Optimization + Scaling",
+    title: "Two meet up in one month",
     desc: "Analytics, A/B test, budget plan, retention—growth tactics."
+  },
+  {
+    step: "Step 05",
+    title: "Certification in 160 Credit",
+    desc: "ertification after 160 credit and oppurtunity to go for job placement."
   },
   {
     step: "Step 05",

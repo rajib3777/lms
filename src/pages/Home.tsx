@@ -14,6 +14,9 @@ import aminul2 from "../assets/aminul_02.jpeg";
 import aminul3 from "../assets/aminul_03.jpeg";
 import { useState, useEffect } from "react";
 import pos_01 from "../assets/cut_01.jpeg";
+import pos_02 from "../assets/cut_02.jpeg";
+
+
 
 import {
   blogPosts,
@@ -383,11 +386,98 @@ export default function Home(){
         </Container>
       </section>
 
+      
+      <div className="px-4 sm:px-8 lg:px-12 mt-6 sm:mt-10">
+        <div className="relative max-w-6xl mx-auto">
+
+          {/* ✅ Mobile: Image first */}
+          <div className="lg:hidden overflow-hidden rounded-3xl shadow-glow ring-1 ring-white/10 mb-4">
+            <img
+              src={pos_01}
+              alt="Training Support"
+              className="w-full h-[clamp(240px,55vw,360px)] object-cover"
+            />
+          </div>
+
+          {/* ✅ Speech Card */}
+          <div
+            className="
+              relative
+              rounded-3xl
+              border border-white/15
+              bg-white/5
+              shadow-glow
+              overflow-visible
+              p-6 sm:p-8
+              lg:pr-[300px]
+              lg:min-h-[560px]
+            "
+          >
+            {/* header */}
+            <div className="flex items-center gap-3 mb-6">
+              <div className="h-12 w-12 sm:h-14 sm:w-14 rounded-2xl bg-white/10 grid place-items-center text-white text-3xl shrink-0">
+                ❝
+              </div>
+              <div>
+                <div className="text-white font-extrabold text-[clamp(14px,1.1vw,16px)] tracking-wide">
+                  আমার বার্তা
+                </div>
+                <div className="text-[var(--muted)] text-[clamp(12px,1vw,14px)]">
+                  ঢাকা-১৬ যুবসমাজের জন্য
+                </div>
+              </div>
+            </div>
+
+            {/* speech */}
+            <div className="text-left max-w-3xl">
+              <p className="text-white font-semibold italic leading-[1.35] text-[clamp(18px,1.9vw,30px)]">
+                আমি বিশ্বাস করি—রাজনীতি মানে শুধু প্রতিশ্রুতি নয়, রাজনীতি মানে কাজ।
+                আর সেই বিশ্বাস থেকেই আমি আমার নির্বাচনী প্রচারণা শুরু করছি কথা দিয়ে নয়, কাজ দিয়ে।
+                <span className="block mt-2 text-white font-extrabold not-italic">
+                  আমি স্পষ্ট করে বলতে চাই—
+                  আমি নির্বাচিত জয়ী হলে, ঢাকা-১৬ পল্লবী-রূপনগরের মানুষের প্রতি আমার প্রতিটি প্রতিশ্রুতি আমি বাস্তবায়ন করবো। কারণ এটি কোনো নির্বাচনী স্টান্ট নয়, এটি আমার দায়িত্ববোধের প্রকাশ।
+                </span>
+              </p>
+
+              <p className="mt-5 text-white/90 italic leading-[1.6] text-[clamp(14px,1.25vw,18px)]">
+                একই সঙ্গে যারা প্রশিক্ষণভিত্তিক নতুন আইডিয়া নিয়ে উদ্যোক্তা হতে চায়, প্রজেক্ট ডেভেলপ করতে চায়—তাদের জন্য দেশ-বিদেশের বিভিন্ন প্রতিষ্ঠান ও বিনিয়োগকারীদের সঙ্গে সংযোগ স্থাপন করা হবে, যাতে তারা বিনিয়োগ পায় এবং স্বাবলম্বী হতে পারে।
+                <span className="block mt-1">
+                  সম্ভাবনার একটি রোল মডেল।
+                </span>
+              </p>
+
+              {/* signature */}
+              <div className="mt-8 pt-5 border-t border-white/15">
+                <div className="text-white font-extrabold text-[clamp(14px,1.15vw,18px)]">
+                  — ক্যাপ্টেন আমিনুল হক
+                </div>
+                <div className="text-[var(--muted)] text-[clamp(12px,1vw,14px)]">
+                  প্রতিষ্ঠাতা ও অনুপ্রেরণা
+                </div>
+              </div>
+            </div>
+
+            {/* ✅ Desktop: Overlap image (taller & aligned) */}
+            <div className="hidden lg:block absolute right-0 bottom-0 translate-x-8 translate-y-8">
+              <div className="overflow-hidden rounded-3xl shadow-glow ring-1 ring-white/10 w-[360px] h-[420px]">
+                <img
+                  src={pos_02}
+                  alt="Training Support"
+                  className="w-full h-full object-cover object-center"
+                />
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
 
 
 
 
 
+
+        
 
       {/* COURSES */}
       <section className="mt-6">
@@ -432,7 +522,7 @@ export default function Home(){
           {/* Banner strip */}
           <div className="mt-10 glass rounded-xl2 p-5 flex flex-col md:flex-row gap-4 md:items-center md:justify-between">
             <div>
-              <div className="font-display text-xl font-extrabold">ফ্রি ডেমো থেকে শুরু করো—তারপর ব্যাচে এনরোল!</div>
+              <div className="font-display text-xl font-extrabold">ফ্রি ব্যাচে এনরোল!</div>
               <div className="text-sm text-[var(--muted)]">সিট সীমিত। আজই রেজিস্ট্রেশন করো।</div>
             </div>
             <a href="#enroll"><AnimatedButton>Register Now <ArrowRight size={18}/></AnimatedButton></a>
@@ -444,9 +534,9 @@ export default function Home(){
       <section id="demo">
         <Container className="py-14">
           <SectionTitle
-            kicker="Demo"
-            title="Demo Class Schedule"
-            desc="৩টা ডেমো ক্লাস—কোর্সের স্টাইল, কন্টেন্ট এবং সাপোর্ট বুঝে নাও।"
+            kicker="Class"
+            title="Class Schedule"
+            desc="ক্লাস—কোর্সের স্টাইল, কন্টেন্ট এবং সাপোর্ট বুঝে নাও।"
           />
           <div className="grid gap-5 lg:grid-cols-3">
             {demoClasses.map((d, idx) => (
@@ -600,7 +690,7 @@ export default function Home(){
         <Container className="py-14">
           <SectionTitle
             kicker="Course Flow"
-            title="Step-by-step Rocket Journey"
+            title="Step-by-step Course Journey"
             desc="আপনার চাহিদা অনুযায়ী স্টেপ-বাই-স্টেপ কোর্স ফ্লো—রকেট জার্নির মতো।"
           />
           <RocketTimeline steps={rocketSteps} />
@@ -613,7 +703,7 @@ export default function Home(){
           <SectionTitle
             kicker="Enrollment"
             title="Choose Your Plan"
-            desc="ফ্রি ডেমো দিয়ে শুরু করো, তারপর তোমার লক্ষ্য অনুযায়ী প্ল্যান সিলেক্ট করো।"
+            desc="শুরু করো, তারপর তোমার লক্ষ্য অনুযায়ী প্ল্যান সিলেক্ট করো।"
           />
           <div className="grid gap-5 lg:grid-cols-3">
             {plans.map((p, idx) => (

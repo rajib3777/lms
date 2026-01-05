@@ -31,12 +31,12 @@ export default function Success(){
       <SectionTitle
         kicker="Success"
         title="Real Outcomes, Real People"
-        desc="ডেমো কনটেন্ট—আপনার বাস্তব স্টুডেন্ট ডেটা/ফটো/ভিডিও দিয়ে আপডেট করলেই সম্পূর্ণ প্রোডাকশন রেডি।"
+        desc="কনটেন্ট—আপনার বাস্তব স্টুডেন্ট ডেটা/ফটো/ভিডিও দিয়ে আপডেট করলেই সম্পূর্ণ প্রোডাকশন রেডি।"
       />
 
       <div className="grid gap-5 md:grid-cols-3">
         <Metric label="Students Guided" value="800+" icon={<Sparkles size={18}/>}/>
-        <Metric label="Projects Completed" value="1500+" icon={<Wand2 size={18}/>}/>
+        <Metric label="Projects Completed" value="2000" icon={<Wand2 size={18}/>}/>
         <Metric label="Placement Support" value="Job/Client" icon={<Briefcase size={18}/>}/>
       </div>
 

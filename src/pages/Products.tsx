@@ -64,7 +64,7 @@ export default function Products(){
           <div className="mt-6 glass rounded-xl2 p-4">
             <div className="text-xs font-bold text-[var(--muted)]">Special Offer</div>
             <div className="mt-1 text-3xl font-extrabold gradient-text">৳ 9,999</div>
-            <div className="text-xs text-[var(--muted)]">Installment available (demo)</div>
+            <div className="text-xs text-[var(--muted)]">Installment available</div>
           </div>
 
           <div className="mt-6">

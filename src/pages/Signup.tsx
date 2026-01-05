@@ -168,7 +168,7 @@ export default function Signup(){
             className="glass rounded-xl2 p-3 text-sm flex items-center gap-2"
           >
             <CheckCircle2 size={18}/>
-            <span>Enrollment submitted! (Demo)</span>
+            <span>Enrollment submitted!</span>
           </motion.div>
         ) : null}
       </form>
