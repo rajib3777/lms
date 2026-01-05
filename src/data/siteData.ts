@@ -115,20 +115,20 @@ export const bestStudents = [
   {
     name: "Raihan",
     title: "Top Performer (Ads)",
-    result: "১ মাসে ৪টা ক্লায়েন্ট",
-    note: "Creative testing + pixel tracking পারফেক্ট করেছে।"
+    result: "অনুসরণ",
+    note: "আমরা গভীর কৃতজ্ঞতা ও শ্রদ্ধার সঙ্গে স্মরণ করছি আমিনুল হক স্যারকে, যিনি আমাদের জন্য এত সুন্দর ও মূল্যবান উদ্যোগ গ্রহণ করেছেন। তাঁর দূরদৃষ্টি, নিষ্ঠা ও আন্তরিক প্রচেষ্টার ফলেই আমরা আজ নতুন সুযোগ ও সম্ভাবনার মুখোমুখি হতে পেরেছি।"
   },
   {
     name: "Jannat",
     title: "Women Entrepreneur Track",
-    result: "নিজের পেজে ২০০+ অর্ডার",
-    note: "Content plan + offer design দিয়ে ব্যবসা স্কেল করেছে।"
+    result: "স্বপ্ন",
+    note: "আমাদের স্বপ্নকে নিজের স্বপ্নের মতো করে আগলে রাখার জন্য আমিনুল হক স্যারকে আন্তরিক কৃতজ্ঞতা ও ভালোবাসা"
   },
   {
     name: "Mahin",
     title: "Portfolio Winner",
-    result: "Junior Marketer (Job)",
-    note: "Portfolio + mock interview দিয়ে চাকরি পেয়েছে।"
+    result: "কৃতজ্ঞতা",
+    note: "কথায় নয়, কাজে বুঝিয়ে দেওয়া একজন মানুষ—আমিনুল হক স্যার। কৃতজ্ঞতা শব্দটি তাঁর জন্যও ছোট মনে হয়।"
   }
 ];
 

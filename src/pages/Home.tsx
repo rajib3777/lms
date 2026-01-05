@@ -15,6 +15,7 @@ import aminul3 from "../assets/aminul_03.jpeg";
 import { useState, useEffect } from "react";
 import pos_01 from "../assets/cut_01.jpeg";
 import pos_02 from "../assets/cut_02.jpeg";
+import pos_03 from "../assets/cut_05.jpeg";
 
 
 
@@ -599,18 +600,86 @@ export default function Home(){
           </div>
 
           <div className="mt-10 grid gap-6 lg:grid-cols-2 items-center">
+            <div className="glass rounded-xl2 p-4 shadow-glow">
+              <img src={pos_03} alt="Poster" className="w-full rounded-xl2 object-cover" />
+            </div>
             <div className="glass rounded-xl2 p-5">
-              <div className="font-display text-xl font-extrabold">Banner-based Learning Experience</div>
-              <p className="mt-2 text-sm text-[var(--muted)]">
-                আমাদের ইনস্টিটিউটের বিশেষত্ব হলো banner-based learning approach। প্রতিটি মডিউল এমনভাবে ডিজাইন করা হয়েছে যাতে শিক্ষার্থীরা বাস্তব জীবনের প্রজেক্টে কাজ করার মাধ্যমে দক্ষতা অর্জন করতে পারে। এই পদ্ধতিতে, শিক্ষার্থীরা কেবল তাত্ত্বিক জ্ঞানই নয়, বরং বাস্তব অভিজ্ঞতাও লাভ করে, যা তাদের ক্যারিয়ার গঠনে সহায়ক হয়।
-              </p>
+              <div className="font-display text-xl font-extrabold">আসসালামু আলাইকুম।</div>
+                <div className="mt-4 text-left max-w-4xl">
+                  <p className="text-white/90 leading-relaxed text-[clamp(14px,1.15vw,16px)]">
+                    আমি <span className="font-semibold text-white">আমিনুল হক</span>,
+                    আসন্ন জাতীয় সংসদ নির্বাচনে ঢাকা-১৬ আসনে
+                    <span className="font-semibold text-white">
+                      {" "}বাংলাদেশ জাতীয়তাবাদী দল (বিএনপি)
+                    </span>{" "}
+                    মনোনীত প্রার্থী।
+                  </p>
+
+                  <p className="mt-4 text-white/85 leading-relaxed text-[clamp(14px,1.15vw,16px)]">
+                    বাংলাদেশ জাতীয়তাবাদী দলের ঘোষিত
+                    <span className="font-semibold text-white"> ৩১ দফা নির্বাচনী ইশতেহারের </span>
+                    ২০ নম্বর দফায় যুবসমাজ ও কর্মসংস্থানের বিষয়ে আমাদের
+                    সুস্পষ্ট অঙ্গীকার তুলে ধরা হয়েছে।
+                    সেখানে তরুণ প্রজন্মের আশা-আকাঙ্ক্ষাকে ধারণ করে
+                    যুগোপযোগী জাতীয় যুবনীতি প্রণয়নের কথা বলা হয়েছে।
+                  </p>
+
+                  <p className="mt-4 text-white/85 leading-relaxed text-[clamp(14px,1.15vw,16px)]">
+                    একইসাথে বেকার যুবকদের জন্য
+                    <span className="font-semibold text-white">
+                      {" "}কর্মসংস্থান নিশ্চিত না হওয়া পর্যন্ত বেকার ভাতা,
+                    </span>{" "}
+                    বহুমুখী ও বাস্তবসম্মত প্রযুক্তি-ভিত্তিক উদ্যোগের মাধ্যমে
+                    বেকারত্ব দূর করা এবং তরুণদের
+                    <span className="font-semibold text-white">
+                      {" "}দক্ষ ও উৎপাদনশীল সম্পদে রূপান্তর
+                    </span>{" "}
+                    করার অঙ্গীকার করা হয়েছে।
+                  </p>
+
+                  {/* Highlight announcement */}
+                  <div className="mt-6 rounded-xl border border-white/15 bg-white/5 p-4">
+                    <p className="text-white font-semibold text-[clamp(15px,1.2vw,18px)] leading-relaxed">
+                      আগামী <span className="text-white font-extrabold">২২ জানুয়ারি ২০২৬</span>{" "}
+                      থেকে ঢাকা-১৬ (পল্লবী–রূপনগর) এলাকার যুবক-যুবতীদের জন্য
+                      আমার নিজস্ব আইটি প্রতিষ্ঠানের মাধ্যমে
+                      <span className="text-white font-extrabold">
+                        {" "}সম্পূর্ণ বিনামূল্যে আইটি প্রশিক্ষণ
+                      </span>{" "}
+                      কার্যক্রম আনুষ্ঠানিকভাবে শুরু হতে যাচ্ছে।
+                    </p>
+                  </div>
+
+                  {/* Bullet skills */}
+                  <div className="mt-6">
+                    <div className="text-white font-bold mb-3 text-[clamp(15px,1.25vw,18px)]">
+                      এই প্রশিক্ষণের আওতায় যুবক-যুবতীরা বিনামূল্যে শিখতে পারবে—
+                    </div>
+
+                    <ul className="grid sm:grid-cols-2 gap-3 text-white/90 text-[clamp(14px,1.1vw,16px)]">
+                      <li className="flex items-center gap-2">
+                        <span className="h-2 w-2 rounded-full bg-white/70" />
+                        গ্রাফিক ডিজাইন
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <span className="h-2 w-2 rounded-full bg-white/70" />
+                        ডিজিটাল মার্কেটিং
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <span className="h-2 w-2 rounded-full bg-white/70" />
+                        ওয়েব ডিজাইন ও ডেভেলপমেন্ট
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <span className="h-2 w-2 rounded-full bg-white/70" />
+                        ভিডিও এডিটিং
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               <div className="mt-4 flex gap-3">
                 <Link to="/about"><AnimatedButton variant="ghost">Institute Info</AnimatedButton></Link>
                 <a href="#enroll"><AnimatedButton>Enroll</AnimatedButton></a>
               </div>
-            </div>
-            <div className="glass rounded-xl2 p-4 shadow-glow">
-              <img src={poster} alt="Poster" className="w-full rounded-xl2 object-cover" />
             </div>
           </div>
         </Container>
