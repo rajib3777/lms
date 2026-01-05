@@ -72,23 +72,22 @@ export default function Home(){
                 className="
                   mt-0
                   mb-2 sm:mb-3
-                  px-2
-                  py-1
-                  text-center font-display font-extrabold
+                  px-2 py-1
+                  text-center
+                  font-display font-extrabold
                   text-white
-                  text-[clamp(22px,3.9vw,58px)]
+                  text-[clamp(20px,3.2vw,52px)]
                   leading-[1.15]
                   tracking-[0.01em]
                   drop-shadow-[0_6px_18px_rgba(0,0,0,0.45)]
-                  mx-auto max-w-full
-                  whitespace-nowrap
-                  text-ellipsis
+                  mx-auto
+                  max-w-6xl
+                  whitespace-normal lg:whitespace-nowrap
                   select-none
                 "
               >
                 ক্যাপ্টেন আমিনুল হক আইটি ইনস্টিটিউট
               </h1>
-
 
 
               {/* ✅ Poster/Banner (responsive) */}
