@@ -11,7 +11,8 @@ export default function Products(){
       <SectionTitle
         kicker="Products"
         title="Courses & Bundles"
-        desc="আপনি আলাদা কোর্স নিতে পারবেন অথবা একসাথে বাণ্ডল নিতে পারবেন—যেটা আপনার লক্ষ্য পূরণ করবে।"
+        desc="আমি চাই—এই এলাকার যুবসমাজ চাকরি খুঁজবে না, চাকরি তৈরি করবে।
+              আমি চাই—ঢাকা-১৬ হোক দক্ষতা, কর্মসংস্থান এবং সম্ভাবনার একটি রোল মডেল।"
       />
 
       <div className="grid gap-5 lg:grid-cols-3">
@@ -47,30 +48,6 @@ export default function Products(){
               </div>
             </motion.div>
           ))}
-        </div>
-
-        <div className="glass rounded-xl2 p-6 shadow-soft">
-          <div className="font-display text-2xl font-extrabold">Bundle: Business Growth Pack</div>
-          <p className="mt-2 text-sm text-[var(--muted)]">
-            Digital Marketing + E-commerce + Creative—সব এক প্যাকেজে। যারা দ্রুত আয় ও গ্রোথ করতে চান তাদের জন্য।
-          </p>
-
-          <div className="mt-5 space-y-3 text-sm text-[var(--muted)]">
-            <div className="flex items-start gap-2"><Target size={18} className="mt-0.5"/> ROI-centric campaign roadmap</div>
-            <div className="flex items-start gap-2"><Layers3 size={18} className="mt-0.5"/> Ready-to-use templates & checklists</div>
-            <div className="flex items-start gap-2"><Flame size={18} className="mt-0.5"/> Weekly growth sprints + review</div>
-          </div>
-
-          <div className="mt-6 glass rounded-xl2 p-4">
-            <div className="text-xs font-bold text-[var(--muted)]">Special Offer</div>
-            <div className="mt-1 text-3xl font-extrabold gradient-text">৳ 9,999</div>
-            <div className="text-xs text-[var(--muted)]">Installment available</div>
-          </div>
-
-          <div className="mt-6">
-            <AnimatedButton className="w-full">Get Bundle</AnimatedButton>
-            <AnimatedButton variant="ghost" className="w-full mt-3">Talk to Support</AnimatedButton>
-          </div>
         </div>
       </div>
     </Container>

@@ -5,8 +5,7 @@ import Rocket from "../components/Rocket";
 import LogoPills from "../components/LogoPills";
 import RocketTimeline from "../components/RocketTimeline";
 import { motion } from "framer-motion";
-import banner from "../assets/banner.jpeg";
-import poster from "../assets/poster.jpeg";
+import childEduImg from "../assets/cut_04.jpeg";
 import Dhaka16MissionSection from "../sections/Dhaka16MissionSection";
 import coordinatorImg from "../assets/coordinatorImg.png";
 import aminul1 from "../assets/aminul_01.jpeg";
@@ -915,6 +914,67 @@ export default function Home(){
           </div>
         </Container>
       </section>
+
+      <section id="child-education" className="relative overflow-x-hidden py-10 sm:py-14">
+        <Container>
+          <div className="overflow-hidden rounded-3xl shadow-glow ring-1 ring-white/10">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
+
+              {/* ✅ Image (no gap) */}
+              <div className="w-full bg-[#0f5f4a] flex items-center justify-center">
+                <img
+                  src={childEduImg}
+                  alt="শিক্ষা ও দক্ষতা"
+                  className="w-full h-auto object-contain"
+                />
+              </div>
+              {/* ✅ Message (no gap) */}
+              <div className="bg-black/25 backdrop-blur-sm p-6 sm:p-8 lg:p-10">
+                <div className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-bold text-white/90">
+                  শিশুদের শিক্ষা ও দক্ষতা
+                </div>
+
+                <h2 className="mt-4 font-display font-extrabold text-white leading-[1.15]
+                              text-[clamp(22px,3vw,40px)]">
+                  আলোকিত ভবিষ্যৎ গড়তে শিক্ষা—আর স্বাবলম্বী হতে দক্ষতা
+                </h2>
+
+                <p className="mt-4 text-white/85 leading-relaxed text-[clamp(14px,1.15vw,16px)]">
+                  আমাদের দেশের শিক্ষার্থীদের উজ্জ্বল ভবিষ্যৎ গঠনে প্রয়োজনীয় সব উদ্যোগ গ্রহণ
+                  এবং প্রতিটি যৌক্তিক চাহিদা ও সমস্যার সমাধান নিশ্চিত করাই আমাদের অঙ্গীকার।
+                  কারণ—আজকের শিক্ষার্থীই আগামী দিনের নেতৃত্ব, সম্ভাবনা, এবং উন্নয়নের চালিকাশক্তি।
+                </p>
+
+                <div className="mt-6 grid gap-3">
+                  {[
+                    "প্রতিটি শিশুর মানসম্মত শিক্ষার নিশ্চয়তা—সহজে, সম্মানের সাথে",
+                    "প্রযুক্তি-ভিত্তিক শিক্ষা সহায়তা ও নিয়মিত দিকনির্দেশনা",
+                    "পড়াশোনার পাশাপাশি জীবনমুখী দক্ষতা: যোগাযোগ, নেতৃত্ব, সমস্যা সমাধান",
+                    "দরিদ্র ও সুবিধাবঞ্চিত শিক্ষার্থীদের জন্য বিশেষ সহায়তা ও সুযোগ",
+                    "পরিবার–বিদ্যালয়–সমাজ একসাথে কাজ করে ‘সেফ ও সাপোর্টিভ’ পরিবেশ তৈরি",
+                  ].map((t, i) => (
+                    <div key={i} className="rounded-2xl border border-white/10 bg-white/5 p-4">
+                      <div className="flex items-start gap-3">
+                        <span className="mt-2 h-2.5 w-2.5 rounded-full bg-white/70 shrink-0" />
+                        <p className="text-white/90 leading-relaxed">{t}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="mt-7 rounded-2xl border border-white/10 bg-white/5 p-4">
+                  <p className="text-white font-semibold leading-relaxed">
+                    লক্ষ্য একটাই—শিক্ষার্থীরা শুধু স্বপ্ন দেখবে না,
+                    <span className="font-extrabold"> দক্ষতা অর্জন করে স্বপ্ন বাস্তব করবে</span>।
+                  </p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </Container>
+      </section>
+
 
       {/* BLOG PREVIEW */}
       <section>

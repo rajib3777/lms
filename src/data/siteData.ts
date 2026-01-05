@@ -80,7 +80,7 @@ export const plans = [
   {
     name: "Digital marketing Bootcamp (DM)",
     price: "৳ 0",
-    tag: "ফ্রি class",
+    tag: "Free class",
     points: ["ক্লাস অ্যাক্সেস", "কোর্স আউটলাইন", "কমিউনিটি ইন্ট্রো", "ক্যারিয়ার রোডম্যাপ"],
     accent: "from-[var(--grad-a)] to-[var(--grad-b)]"
   },
