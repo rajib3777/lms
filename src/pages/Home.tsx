@@ -232,7 +232,7 @@ export default function Home(){
                     <img
                       src={pos_01}
                       alt="Training Support"
-                      className="w-full h-[clamp(260px,40vw,420px)] object-cover"
+                      className="w-full h-full object-cover"
                     />
                   </div>
                 </div>
