@@ -16,6 +16,7 @@ import { useState, useEffect } from "react";
 import pos_01 from "../assets/cut_01.jpeg";
 import pos_02 from "../assets/cut_02.jpeg";
 import pos_03 from "../assets/cut_05.jpeg";
+import womenImg from "../assets/cut_03.jpeg";
 
 
 
@@ -724,6 +725,95 @@ export default function Home(){
           </div>
         </Container>
       </section>
+
+      <section id="women-empowerment" className="relative overflow-x-hidden py-10 sm:py-14">
+        <Container>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10 items-start">
+
+            {/* ✅ Mobile first: Image */}
+            <div className="order-1 lg:order-2">
+              <div className="overflow-hidden rounded-3xl shadow-glow ring-1 ring-white/10">
+                <img
+                  src={womenImg}
+                  alt="নারীর ক্ষমতায়ন"
+                  className="w-full h-full object-cover object-center"
+                />
+              </div>
+              <p className="mt-3 text-center text-sm text-[var(--muted)]">
+                দক্ষতা, আত্মবিশ্বাস, ও সুযোগ—এটাই নারীর এগিয়ে যাওয়ার শক্তি।
+              </p>
+            </div>
+
+            {/* ✅ Content */}
+            <div className="order-2 lg:order-1">
+              <div className="glass rounded-3xl p-6 sm:p-8 shadow-soft ring-1 ring-white/10">
+                <div className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-bold text-white/90">
+                  নারীর ক্ষমতায়ন
+                </div>
+
+                <h2 className="mt-4 font-display font-extrabold text-white leading-[1.15]
+                              text-[clamp(24px,3.2vw,44px)]">
+                  দক্ষ নারী মানেই শক্তিশালী পরিবার, শক্তিশালী সমাজ
+                </h2>
+
+                <p className="mt-4 text-white/85 leading-relaxed text-[clamp(14px,1.15vw,16px)]">
+                  আমরা বিশ্বাস করি—নারীর ক্ষমতায়ন মানে শুধু বক্তব্য নয়; মানে শিক্ষা, দক্ষতা,
+                  নিরাপদ কর্মপরিবেশ এবং বাস্তব সুযোগ তৈরি করা। ঢাকা-১৬ এলাকার নারীদের জন্য
+                  এমন একটি পথ তৈরি করতে চাই, যেখানে তারা স্বাবলম্বী হয়ে নিজস্ব ক্যারিয়ার গড়তে পারে।
+                </p>
+
+                {/* ✅ Points */}
+                <div className="mt-6 grid gap-3">
+                  {[
+                    "নারীদের জন্য দক্ষতা-ভিত্তিক প্রশিক্ষণ: গ্রাফিক ডিজাইন, ডিজিটাল মার্কেটিং, ওয়েব, ভিডিও এডিটিং",
+                    "ঘরে বসে আয়ের সুযোগ: ফ্রিল্যান্সিং ও অনলাইন সার্ভিস",
+                    "ক্যারিয়ার গাইডলাইন ও মেন্টরশিপ—শুধু শেখানো নয়, হাতে-কলমে সাপোর্ট",
+                    "উদ্যোক্তা হতে সহায়তা: প্রজেক্ট, নেটওয়ার্কিং, ও বাস্তব দিকনির্দেশনা",
+                    "সম্মানজনক ও নিরাপদ পরিবেশ—নারীদের আত্মবিশ্বাসই আমাদের অগ্রাধিকার",
+                  ].map((t, i) => (
+                    <div
+                      key={i}
+                      className="rounded-2xl border border-white/10 bg-white/5 p-4"
+                    >
+                      <div className="flex items-start gap-3">
+                        <span className="mt-2 h-2.5 w-2.5 rounded-full bg-white/70 shrink-0" />
+                        <p className="text-white/90 leading-relaxed">{t}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                {/* ✅ Small highlight line */}
+                <div className="mt-7 rounded-2xl border border-white/10 bg-white/5 p-4">
+                  <p className="text-white font-semibold leading-relaxed">
+                    লক্ষ্য একটাই—নারীরা চাকরি খুঁজবে না, <span className="font-extrabold">দক্ষতা অর্জন করে সুযোগ তৈরি করবে</span>।
+                  </p>
+                  <p className="mt-1 text-[var(--muted)] text-sm">
+                    একটি নারীর সাফল্য মানেই একটি পরিবারের ভবিষ্যৎ আরও আলোকিত।
+                  </p>
+                </div>
+
+                {/* ✅ Optional: simple buttons (no icons) */}
+                <div className="mt-7 flex flex-col sm:flex-row gap-3">
+                  <a href="#enroll" className="w-full sm:w-auto">
+                    <AnimatedButton className="w-full sm:w-auto">
+                      রেজিস্ট্রেশন করুন
+                    </AnimatedButton>
+                  </a>
+                  <a href="#demo" className="w-full sm:w-auto">
+                    <AnimatedButton variant="ghost" className="w-full sm:w-auto">
+                      ডেমো ক্লাস দেখুন
+                    </AnimatedButton>
+                  </a>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </Container>
+      </section>
+
 
       {/* REVIEWS */}
       <section>
