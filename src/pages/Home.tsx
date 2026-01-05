@@ -305,7 +305,7 @@ export default function Home(){
           {/* ✅ Mobile: Image first */}
           <div className="lg:hidden overflow-hidden rounded-3xl shadow-soft ring-1 ring-white/10 mb-4">
             <img
-              src={pos_01}
+              src={pos_02}
               alt="Training Support"
               className="w-full h-[clamp(260px,60vw,380px)] object-cover"
             />
