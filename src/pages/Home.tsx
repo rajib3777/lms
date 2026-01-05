@@ -463,7 +463,7 @@ export default function Home(){
                   </a>
                   <a href="#demo" className="w-full sm:w-auto">
                     <AnimatedButton variant="ghost" className="w-full sm:w-auto">
-                      ডেমো ক্লাস দেখুন
+                      ক্লাস দেখুন
                     </AnimatedButton>
                   </a>
                 </div>
