@@ -10,12 +10,12 @@ export type Course = {
 };
 
 export const slogan = {
-  headline: "স্কিল দিয়ে গড়া ভবিষ্যৎ, কর্মসংস্থানে অঙ্গীকার !",
+  headline: "দক্ষতা উন্নয়নের মাধ্যমে কর্মসংস্থান, কর্মসংস্থানের মাধ্যমে শক্তিশালী ঢাকা-১৬",
   sub: "Digital Marketing & Entrepreneurship-এর জন্য একদম ইন্ডাস্ট্রি-রেডি বুটক্যাম্প। লাইভ ক্লাস, ডেমো ক্লাস, সাপোর্ট, গাইডলাইন—সব একসাথে।"
 };
 
 export const heroBullets = [
-  "ফ্রি ডেমো ক্লাস + লাইভ কন্সেপচুয়াল শেখানো",
+  "ফ্রি ক্লাস + লাইভ কন্সেপচুয়াল শেখানো",
   "রিয়েল প্রজেক্ট-ভিত্তিক শেখা (Portfolio Ready)",
   "ইন্টার্নশিপ/জব প্রিপ + CV/Interview সাপোর্ট",
   "নারীদের জন্য স্পেশাল উদ্যোক্তা ট্র্যাক"
@@ -34,40 +34,40 @@ export const courses: Course[] = [
     title: "Digital Marketing Mastery",
     subtitle: "Facebook Ads • Google Ads • SEO • Analytics",
     level: "Beginner",
-    duration: "8 Weeks",
+    duration: "6 month",
     seats: "Limited Seats",
     includes: ["Ad Campaign Strategy", "SEO Fundamentals", "Tracking & Pixel Setup", "Client Hunting Basics", "Creative Testing Framework"],
-    priceTag: "Free Demo + Paid Batch"
+    priceTag: "Free Batch"
   },
   {
     id: "ecom",
-    title: "Online Business & E-Commerce",
+    title: "Entrepreneurship & E-Commerce",
     subtitle: "Branding • Product • Marketplace • Fulfillment",
     level: "Beginner",
-    duration: "6 Weeks",
+    duration: "6 month",
     seats: "Limited Seats",
     includes: ["Business Model Canvas", "Store Setup", "Content Plan", "Sales Funnel", "Delivery & Customer Care SOP"],
-    priceTag: "Free Demo + Paid Batch"
+    priceTag: "Free Batch"
   },
   {
     id: "gd",
     title: "Graphic Design for Business",
     subtitle: "Canva • Photoshop Basics • Brand Kit",
     level: "Beginner",
-    duration: "5 Weeks",
+    duration: "6 month",
     seats: "Limited Seats",
     includes: ["Social Media Kit", "Ad Creative", "Brand Consistency", "Export & Delivery", "Design Feedback & Iteration"],
-    priceTag: "Free Demo + Paid Batch"
+    priceTag: "Free Batch"
   },
   {
     id: "ve",
     title: "Video Editing for Ads",
     subtitle: "Shorts/Reels • Motion Basics • Hooks",
     level: "Intermediate",
-    duration: "6 Weeks",
+    duration: "6 month",
     seats: "Limited Seats",
     includes: ["Reels Template", "Sound & Beat", "Caption Workflow", "Ad-Ready Export", "Hook & Storyboard Practice"],
-    priceTag: "Free Demo + Paid Batch"
+    priceTag: "Free Batch"
   }
 ];
 

@@ -9,6 +9,11 @@ import banner from "../assets/banner.jpeg";
 import poster from "../assets/poster.jpeg";
 import Dhaka16MissionSection from "../sections/Dhaka16MissionSection";
 import coordinatorImg from "../assets/coordinatorImg.png";
+import aminul1 from "../assets/aminul_01.jpeg";
+import aminul2 from "../assets/aminul_02.jpeg";
+import aminul3 from "../assets/aminul_03.jpeg";
+import { useState, useEffect } from "react";
+import pos_01 from "../assets/cut_01.jpeg";
 
 import {
   blogPosts,
@@ -37,13 +42,24 @@ function Stat({ label, value }: { label: string; value: string }){
 }
 
 export default function Home(){
+  const images = [aminul1, aminul2, aminul3];
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setIndex((prev) => (prev + 1) % images.length);
+    }, 3000);
+
+    return () => clearInterval(timer);
+  }, [images.length]);
+
   return (
     <>
-      {/* HERO */}
+      
     
       {/* HERO */}
       <section className="relative overflow-x-hidden">
-        <Container className="py-12 sm:py-16 lg:py-20">
+        <Container className="pt-3 pb-10 sm:pt-6 sm:pb-14 lg:pt-8 lg:pb-16">
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
@@ -52,25 +68,51 @@ export default function Home(){
           >
             {/* ✅ TEXT CENTER */}
             <div className="text-center px-1 sm:px-0">
-              <div className="inline-flex items-center gap-2 glass rounded-full px-3 sm:px-4 py-2 text-[12px] sm:text-sm font-semibold mx-auto">
-                <Sparkles size={16} className="shrink-0" />
-                <span className="whitespace-nowrap sm:whitespace-normal">
-                  ক্যাপ্টেন আমিনুল হক আইটি ইনস্টিটিউট
-                </span>
-              </div>
+              <h1
+                className="
+                  mt-0
+                  mb-2 sm:mb-3
+                  px-2
+                  py-1
+                  text-center font-display font-extrabold
+                  text-white
+                  text-[clamp(22px,3.9vw,58px)]
+                  leading-[1.15]
+                  tracking-[0.01em]
+                  drop-shadow-[0_6px_18px_rgba(0,0,0,0.45)]
+                  mx-auto max-w-full
+                  whitespace-nowrap
+                  text-ellipsis
+                  select-none
+                "
+              >
+                ক্যাপ্টেন আমিনুল হক আইটি ইনস্টিটিউট
+              </h1>
+
+
 
               {/* ✅ Poster/Banner (responsive) */}
-              <div className="mt-0 sm:mt-0 rounded-xl2 overflow-hidden shadow-glow">
-                <img
-                  src={banner}
-                  alt="Institute Banner"
-                  className="w-full object-contain h-[clamp(200px,32vw,420px)]"
-                />
+              <div className="mt-4 sm:mt-0 shadow-glow overflow-hidden w-full">
+                <div
+                  className="flex transition-transform duration-700 ease-in-out"
+                  style={{ transform: `translateX(-${index * 100}%)` }}
+                >
+                  {images.map((img, i) => (
+                    <div key={i} className="min-w-full">
+                      <img
+                        src={img}
+                        alt={`Banner ${i + 1}`}
+                        className="w-full h-[clamp(200px,32vw,420px)] object-cover"
+                      />
+                    </div>
+                  ))}
+                </div>
               </div>
+
 
               
               <h1 className="mt-2 sm:mt-2 pt-3 pb-2 font-display font-extrabold tracking-tight mx-auto overflow-visible [text-wrap:balance] leading-[1.35] sm:leading-[1.3]">
-                <span className="gradient-text inline-block text-[clamp(32px,5.2vw,72px)]">
+                <span className="gradient-text inline-block text-[clamp(26px,4.2vw,60px)]">
                   {slogan.headline}
                 </span>
               </h1>
@@ -90,7 +132,7 @@ export default function Home(){
                 </a>
                 <a href="#demo" className="w-full sm:w-auto">
                   <AnimatedButton variant="ghost" className="w-full sm:w-auto">
-                    Demo Class দেখুন <PlayCircle size={18} />
+                    Class দেখুন <PlayCircle size={18} />
                   </AnimatedButton>
                 </a>
               </div>
@@ -110,30 +152,97 @@ export default function Home(){
               ))}
             </div>
 
-
-            {/* ✅ 4 stats responsive */}
-            <div className="mt-7 sm:mt-8 py-5 sm:py-6 grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-4xl mx-auto">
-              {quickFacts.map((s) => (
-                <Stat key={s.label} label={s.label} value={s.value} />
-              ))}
-            </div>
+            
+            
 
             {/* ✅ Training card responsive */}
-            <div className="mt-4 sm:mt-5 glass rounded-xl2 p-4 max-w-3xl mx-auto">
-              <div className="flex items-center gap-3">
-                <div className="h-10 w-10 rounded-xl2 btn-grad animate-shimmer grid place-items-center text-white font-extrabold shrink-0">
-                  ✓
-                </div>
-                <div>
-                  <div className="font-bold text-[clamp(14px,1.3vw,16px)]">
-                    Training শেষে
+            <div className="mt-6 sm:mt-8">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
+
+                {/* 🔹 LEFT: Training Card + Quote */}
+                <div className="flex justify-start">
+                  <div className="max-w-xl w-full">
+
+                    {/* Training Card */}
+                    <div className="glass rounded-xl2 p-4">
+                      <div className="flex items-center gap-3">
+                        <div className="h-10 w-10 rounded-xl2 btn-grad animate-shimmer grid place-items-center text-white font-extrabold shrink-0">
+                          ✓
+                        </div>
+                        <div>
+                          <div className="font-bold text-[clamp(14px,1.3vw,16px)]">
+                            Training শেষে
+                          </div>
+                          <div className="text-[clamp(12px,1.1vw,14px)] text-[var(--muted)]">
+                            কাজের ব্যবস্থা + জব প্লেসমেন্ট গাইডলাইন
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* ✅ Quote (under training card) */}
+                    <div className="mt-6 rounded-2xl border border-white/15 bg-white/5 p-6 sm:p-7 shadow-glow">
+                      <div className="flex gap-4 items-start">
+
+                        {/* Quote icon */}
+                        <div className="h-12 w-12 sm:h-14 sm:w-14 rounded-2xl bg-white/10 
+                                        grid place-items-center text-white text-3xl shrink-0">
+                          ❝
+                        </div>
+
+                        <div className="text-left">
+                          <p className="text-white italic font-medium
+                                        leading-relaxed
+                                        text-[clamp(15px,1.4vw,20px)]">
+                            আমি চাই—এই এলাকার যুবসমাজ চাকরি খুঁজবে না,
+                            <span className="block mt-1 font-semibold text-white">
+                              চাকরি তৈরি করবে।
+                            </span>
+                          </p>
+
+                          <p className="mt-4 text-white/90 italic
+                                        leading-relaxed
+                                        text-[clamp(14px,1.25vw,18px)]">
+                            আমি চাই—ঢাকা-১৬ হোক দক্ষতা, কর্মসংস্থান এবং
+                            <span className="block mt-1">
+                              সম্ভাবনার একটি রোল মডেল।
+                            </span>
+                          </p>
+
+                          {/* Signature */}
+                          <div className="mt-5 pt-4 border-t border-white/15">
+                            <div className="text-sm sm:text-base font-bold text-white">
+                              — ক্যাপ্টেন আমিনুল হক
+                            </div>
+                            <div className="text-xs sm:text-sm text-[var(--muted)]">
+                              প্রতিষ্ঠাতা ও অনুপ্রেরণা
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+
+
                   </div>
-                  <div className="text-[clamp(12px,1.1vw,14px)] text-[var(--muted)]">
-                    কাজের ব্যবস্থা + জব প্লেসমেন্ট গাইডলাইন
+                </div>
+
+                {/* 🔹 RIGHT: Big Image */}
+                <div className="w-full">
+                  <div className="overflow-hidden rounded-2xl shadow-glow">
+                    <img
+                      src={pos_01}
+                      alt="Training Support"
+                      className="w-full h-[clamp(260px,40vw,420px)] object-cover"
+                    />
                   </div>
                 </div>
+
               </div>
             </div>
+
+
+
 
             {/* ✅ Remaining bullets (responsive) */}
             {heroBullets.length > 4 && (
@@ -175,41 +284,8 @@ export default function Home(){
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-start">
 
-            {/* LEFT ROADMAP – DIGITAL MARKETING */}
-            <div className="mt-16 hidden lg:block">
-              <div className="glass rounded-xl2 p-4">
-                <div className="font-extrabold mb-4 text-center">
-                  Course Module
-                </div>
-
-                <div className="relative pl-4 space-y-4">
-                  <div className="absolute left-1 top-0 bottom-0 w-px bg-white/20" />
-
-                  {[
-                    "Marketing Fundamentals",
-                    "Social Media Marketing",
-                    "200 Course Credit",
-                    "Certification in 160 Credit",
-                    "Analytics & Reporting",
-                    "Onlien Based Class",
-                    "2 meet up in one month",
-                    "Duration 6 month",
-                  ].map((step, i) => (
-                    <div key={i} className="relative flex gap-3">
-                      <span className="mt-1 h-2.5 w-2.5 rounded-full bg-purple-400" />
-                      <span className="text-sm text-[var(--muted)]">
-                        {step}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            
-
-            {/* CENTER – COORDINATOR CARD (UNCHANGED) */}
-            <div className="flex justify-center">
+            {/* ✅ CENTER – COORDINATOR CARD (Mobile first, Desktop middle) */}
+            <div className="flex justify-center order-1 lg:order-2">
               <div
                 className="
                   rounded-2xl overflow-hidden shadow-glow
@@ -240,8 +316,39 @@ export default function Home(){
               </div>
             </div>
 
-            {/* RIGHT ROADMAP – ENTREPRENEURSHIP */}
-            <div className="mt-16 hidden lg:block">
+            {/* ✅ LEFT ROADMAP – COURSE MODULE (Mobile second, Desktop left) */}
+            <div className="mt-6 lg:mt-16 order-2 lg:order-1">
+              <div className="glass rounded-xl2 p-4">
+                <div className="font-extrabold mb-4 text-center">
+                  Course Module
+                </div>
+
+                <div className="relative pl-4 space-y-4">
+                  <div className="absolute left-1 top-0 bottom-0 w-px bg-white/20" />
+
+                  {[
+                    "Marketing Fundamentals",
+                    "Social Media Marketing",
+                    "200 Course Credit",
+                    "Certification in 160 Credit",
+                    "Analytics & Reporting",
+                    "Onlien Based Class",
+                    "Two meet up in one month",
+                    "Duration 6 month",
+                  ].map((step, i) => (
+                    <div key={i} className="relative flex gap-3">
+                      <span className="mt-1 h-2.5 w-2.5 rounded-full bg-purple-400" />
+                      <span className="text-sm text-[var(--muted)]">
+                        {step}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* ✅ RIGHT ROADMAP – ENTREPRENEURSHIP (Mobile third, Desktop right) */}
+            <div className="mt-6 lg:mt-16 order-3 lg:order-3">
               <div className="glass rounded-xl2 p-4">
                 <div className="font-extrabold mb-4 text-center">
                   Entrepreneurship Roadmap
