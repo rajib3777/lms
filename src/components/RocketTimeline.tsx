@@ -71,15 +71,31 @@ export default function RocketTimeline({
           "
         >
           {/* ✅ Image takes remaining height (not giant, but full height in column) */}
-          <div className="relative flex-1 min-h-[240px]">
+          <div
+            className="
+              relative w-full
+              h-[60vh]        /* small screen: viewport based height */
+              sm:h-[50vh]
+              lg:flex-1      /* large screen: stretch with steps */
+            "
+          >
             <img
               src={poster}
               alt="Slogan Poster"
-              className="absolute inset-0 w-full h-full object-cover"
+              className="
+                absolute inset-0
+                w-full h-full
+                object-contain      
+                lg:object-cover    
+                bg-black            
+              "
             />
-            {/* soft overlay */}
-            <div className="absolute inset-0 bg-black/20" />
+
+            {/* soft overlay (desktop only looks better) */}
+            <div className="absolute inset-0 bg-black/10 lg:bg-black/20" />
           </div>
+
+
 
           {/* ✅ Slogans (fixed bottom, bold, সুন্দর) */}
           <div className="p-5 text-center">
