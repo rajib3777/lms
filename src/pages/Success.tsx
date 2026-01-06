@@ -7,10 +7,23 @@ import { bestStudents, companyConnections, testimonials } from "../data/siteData
 import LogoPills from "../components/LogoPills";
 
 const stories = [
-  { name: "Shirin", title: "Home-based entrepreneur", text: "নিজের পেজ থেকে নিয়মিত অর্ডার পাই। কন্টেন্ট প্ল্যান + অ্যাড সেটআপ শিখে টার্নওভার বেড়েছে।" },
-  { name: "Riad", title: "Junior Digital Marketer", text: "পোর্টফোলিও বানিয়ে ১ম জব পাই। ইন্টারভিউ প্র্যাকটিস অনেক হেল্প করেছে।" },
-  { name: "Nusrat", title: "Freelance Designer", text: "Canva/Design workflow শিখে ফাইভার গিগ optimize করি। এখন নিয়মিত ক্লায়েন্ট।" },
+  {
+    name: "Shirin",
+    title: "Home-based Entrepreneur",
+    text: "ক্যাপ্টেন আমিনুল হকের উদ্যোগে গড়ে ওঠা Captain Aminul Haque IT Institute আমার জীবনের মোড় ঘুরিয়ে দিয়েছে। এখান থেকে কন্টেন্ট প্ল্যানিং ও ফেসবুক অ্যাড শিখে আজ নিজের পেজ থেকেই নিয়মিত অর্ডার পাই এবং পরিবারকে সাপোর্ট করতে পারছি।"
+  },
+  {
+    name: "Riad",
+    title: "Junior Digital Marketer",
+    text: "Captain Aminul Haque IT Institute প্রমাণ করেছে—রাজনীতি মানে শুধু কথা নয়, বাস্তব কাজ। এখানকার স্কিল ট্রেনিং ও মেন্টরশিপের কারণেই আমি শক্ত পোর্টফোলিও বানিয়ে আমার প্রথম চাকরি পাই। এই উদ্যোগের জন্য ক্যাপ্টেন আমিনুল হকের প্রতি কৃতজ্ঞ।"
+  },
+  {
+    name: "Nusrat",
+    title: "Freelance Designer",
+    text: "নারীদের আত্মনির্ভরশীল করতে ক্যাপ্টেন আমিনুল হকের এই উদ্যোগ সত্যিই প্রশংসনীয়। Captain Aminul Haque IT Institute থেকে Canva ও ডিজাইন ওয়ার্কফ্লো শিখে Fiverr গিগ অপটিমাইজ করি। এখন নিয়মিত ক্লায়েন্ট নিয়ে কাজ করছি।"
+  }
 ];
+
 
 function Metric({ label, value, icon }: { label: string; value: string; icon: React.ReactNode }){
   return (
@@ -31,12 +44,12 @@ export default function Success(){
       <SectionTitle
         kicker="Success"
         title="Real Outcomes, Real People"
-        desc="কনটেন্ট—আপনার বাস্তব স্টুডেন্ট ডেটা/ফটো/ভিডিও দিয়ে আপডেট করলেই সম্পূর্ণ প্রোডাকশন রেডি।"
+        desc="আমি চাই—এই এলাকার যুবসমাজ চাকরি খুঁজবে না, চাকরি তৈরি করবে। আমি চাই—ঢাকা-১৬ হোক দক্ষতা, কর্মসংস্থান এবং সম্ভাবনার একটি রোল মডেল।"
       />
 
       <div className="grid gap-5 md:grid-cols-3">
-        <Metric label="Students Guided" value="800+" icon={<Sparkles size={18}/>}/>
-        <Metric label="Projects Completed" value="2000" icon={<Wand2 size={18}/>}/>
+        <Metric label="Students Guided" value="2000+" icon={<Sparkles size={18}/>}/>
+        <Metric label="Projects Completed" value="120" icon={<Wand2 size={18}/>}/>
         <Metric label="Placement Support" value="Job/Client" icon={<Briefcase size={18}/>}/>
       </div>
 
