@@ -669,6 +669,18 @@ export default function Home(){
         </Container>
       </section>
 
+      {/* COURSE FLOW (ROCKET TIMELINE) */}
+      <section>
+        <Container className="py-14">
+          <SectionTitle
+            kicker="Course Flow"
+            title="Step-by-step Course Journey"
+            desc="আপনার চাহিদা অনুযায়ী স্টেপ-বাই-স্টেপ কোর্স ফ্লো—রকেট জার্নির মতো।"
+          />
+          <RocketTimeline steps={rocketSteps} />
+        </Container>
+      </section>
+
     
 
       {/* COURSES */}
@@ -679,25 +691,54 @@ export default function Home(){
             title="Digital Marketing & Entrepreneurship Track"
             desc="শুধু শেখানো নয়—প্রজেক্ট, ফিডব্যাক, এবং রিয়েল-ওয়ার্ল্ড এক্সিকিউশন।"
           />
-          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+
+          {/* ✅ Key Highlights (INSIDE COURSES) */}
+          <div className="mt-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              {heroBullets.slice(0, 4).map((t) => (
+                <div
+                  key={t}
+                  className="relative glass rounded-2xl p-5 shadow-soft hover:shadow-glow transition duration-300"
+                >
+                  {/* soft accent */}
+                  <div className="absolute -top-6 -right-6 h-16 w-16 rounded-full bg-white/5 blur-2xl" />
+
+                  <div className="flex items-start gap-3">
+                    <div className="h-9 w-9 rounded-xl2 bg-white/10 grid place-items-center shrink-0">
+                      <CheckCircle2 size={18} className="text-white/90" />
+                    </div>
+
+                    <div className="text-[clamp(14px,1.15vw,16px)] font-semibold text-white leading-relaxed">
+                      {t}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* ✅ Courses Grid */}
+          <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
             {courses.map((c, idx) => (
               <motion.div
                 key={c.id}
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: .45, delay: idx * .05 }}
+                transition={{ duration: 0.45, delay: idx * 0.05 }}
                 whileHover={{ y: -4 }}
                 className="glass rounded-xl2 p-5 shadow-soft hover:shadow-glow transition"
               >
-                <div className="text-xs font-bold text-[var(--muted)]">{c.level} • {c.duration}</div>
+                <div className="text-xs font-bold text-[var(--muted)]">
+                  {c.level} • {c.duration}
+                </div>
                 <div className="mt-2 font-display text-lg font-extrabold">{c.title}</div>
                 <div className="text-sm text-[var(--muted)]">{c.subtitle}</div>
 
                 <div className="mt-4 space-y-2 text-sm text-[var(--muted)]">
-                  {c.includes.slice(0,3).map(x => (
+                  {c.includes.slice(0, 3).map((x) => (
                     <div key={x} className="flex items-start gap-2">
-                      <CheckCircle2 size={16} className="mt-0.5"/>
+                      <CheckCircle2 size={16} className="mt-0.5" />
                       <span>{x}</span>
                     </div>
                   ))}
@@ -705,7 +746,11 @@ export default function Home(){
 
                 <div className="mt-5 flex items-center justify-between">
                   <div className="text-xs font-semibold text-[var(--muted)]">{c.priceTag}</div>
-                  <Link to="/products"><AnimatedButton variant="soft" className="px-3 py-2 text-sm">Details</AnimatedButton></Link>
+                  <Link to="/products">
+                    <AnimatedButton variant="soft" className="px-3 py-2 text-sm">
+                      Details
+                    </AnimatedButton>
+                  </Link>
                 </div>
               </motion.div>
             ))}
@@ -717,7 +762,11 @@ export default function Home(){
               <div className="font-display text-xl font-extrabold">ফ্রি ব্যাচে এনরোল!</div>
               <div className="text-sm text-[var(--muted)]">সিট সীমিত। আজই রেজিস্ট্রেশন করো।</div>
             </div>
-            <a href="#enroll"><AnimatedButton>Register Now <ArrowRight size={18}/></AnimatedButton></a>
+            <a href="#enroll">
+              <AnimatedButton>
+                Register Now <ArrowRight size={18} />
+              </AnimatedButton>
+            </a>
           </div>
         </Container>
       </section>
@@ -833,64 +882,7 @@ export default function Home(){
         </Container>
       </section>
 
-      {/* ✅ Key Highlights */}
-      <div className="px-4 mt-10 sm:mt-12">
-        <div
-          className="
-            grid
-            grid-cols-1
-            sm:grid-cols-2
-            lg:grid-cols-4
-            gap-4
-          "
-        >
-          {heroBullets.slice(0, 4).map((t, i) => (
-            <div
-              key={t}
-              className="
-                relative
-                glass
-                rounded-2xl
-                p-5
-                shadow-soft
-                hover:shadow-glow
-                transition
-                duration-300
-              "
-            >
-              {/* soft accent */}
-              <div className="absolute -top-6 -right-6 h-16 w-16 rounded-full bg-white/5 blur-2xl" />
-
-              <div className="flex items-start gap-3">
-                {/* icon */}
-                <div className="
-                  h-9 w-9
-                  rounded-xl2
-                  bg-white/10
-                  grid place-items-center
-                  shrink-0
-                ">
-                  <CheckCircle2 size={18} className="text-white/90" />
-                </div>
-
-                {/* text */}
-                <div>
-                  <div
-                    className="
-                      text-[clamp(14px,1.15vw,16px)]
-                      font-semibold
-                      text-white
-                      leading-relaxed
-                    "
-                  >
-                    {t}
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
+      
 
 
 
@@ -920,18 +912,6 @@ export default function Home(){
               </motion.div>
             ))}
           </div>
-        </Container>
-      </section>
-
-      {/* COURSE FLOW (ROCKET TIMELINE) */}
-      <section>
-        <Container className="py-14">
-          <SectionTitle
-            kicker="Course Flow"
-            title="Step-by-step Course Journey"
-            desc="আপনার চাহিদা অনুযায়ী স্টেপ-বাই-স্টেপ কোর্স ফ্লো—রকেট জার্নির মতো।"
-          />
-          <RocketTimeline steps={rocketSteps} />
         </Container>
       </section>
 

@@ -118,7 +118,7 @@ export default function Dhaka16MissionSection() {
               </motion.div>
 
               {/* RIGHT column (top + bottom) */}
-              <div className="space-y-6">
+              <div className="space-y-10 lg:-mt-8">
                 <PromiseCard
                   delay={0.09}
                   title="জব/ইন্টার্নশিপ কানেকশন"

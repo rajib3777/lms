@@ -167,7 +167,7 @@ export const rocketSteps = [
     desc: "ertification after 160 credit and oppurtunity to go for job placement."
   },
   {
-    step: "Step 05",
+    step: "Step 06",
     title: "Career / Business Launch",
     desc: "Portfolio, CV, client hunting, offer crafting, interview prep."
   }
