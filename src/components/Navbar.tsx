@@ -16,7 +16,7 @@ const nav = [
 ];
 
 export default function Navbar(){
-  const { theme, toggle } = useTheme();
+  const { theme } = useTheme();
   const [open, setOpen] = useState(false);
   const loc = useLocation();
 
@@ -79,7 +79,6 @@ export default function Navbar(){
 
             <div className="flex items-center gap-2">
               <button
-                onClick={toggle}
                 className="focus-ring glass rounded-xl2 p-2.5 hover:shadow-soft transition"
                 aria-label="Toggle theme"
                 title="Color Mode"
